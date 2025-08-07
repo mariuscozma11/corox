@@ -1,103 +1,132 @@
-import Image from "next/image";
+"use client"
+import Link from 'next/link'
+import { Award, Cog, Wrench } from 'lucide-react'
+import QuoteForm from '@/components/QuoteForm'
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* Hero Section */}
+      <section className="bg-slate-800 text-white relative">
+        {/* Grid Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
+          <div className="max-w-4xl pt-8">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
+              Soluții de Automatizare Industrială și Certificări CE
+            </h1>
+            <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-slate-300">
+              Corox Engineering oferă servicii profesionale în domeniul automatizărilor industriale,
+              certificărilor CE, evaluărilor de risc și sistemelor tehnice integrate.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6">
+              <Link
+                href="/contact"
+                className="bg-slate-700 text-white px-8 py-4 font-semibold hover:bg-slate-600 transition-all duration-300 flex items-center space-x-3"
+              >
+                <span>Contactează-ne</span>
+              </Link>
+              <Link
+                href="/servicii"
+                className="border-2 border-slate-400 text-slate-300 px-8 py-4 font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Vezi Serviciile
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <div className="inline-block">
+              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+                Servicii Principale
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6 text-left">
+              Despre Corox Engineering
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl text-left leading-relaxed">
+              Suntem specializați în oferirea de soluții tehnice integrate pentru industria românească,
+              cu accent pe calitate, siguranță și conformitate cu standardele europene.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+              <div className="mb-6">
+                <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
+                  <Award className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Certificări CE</h3>
+                <p className="text-gray-600 text-left leading-relaxed">
+                  Servicii complete de certificare și evaluare conform standardelor europene pentru echipamente industriale.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+              <div className="mb-6">
+                <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
+                  <Cog className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Automatizări Industriale</h3>
+                <p className="text-gray-600 text-left leading-relaxed">
+                  Sisteme de automatizare și integrare de celule robotizate pentru optimizarea proceselor industriale.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+              <div className="mb-6">
+                <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
+                  <Wrench className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Sisteme Tehnice</h3>
+                <p className="text-gray-600 text-left leading-relaxed">
+                  Structuri metalice și instalații electrice pentru industria modernă și aplicații comerciale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Request Section */}
+      <section className="py-20 bg-slate-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <div className="inline-block">
+              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+                Cerere Ofertă
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6 text-left">
+              Cerere de Ofertă
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl text-left leading-relaxed">
+              Contactați-ne pentru o ofertă personalizată pentru proiectul dumneavoastră.
+              Echipa noastră vă va contacta în maxim 24 de ore.
+            </p>
+          </div>
+          <div className="border-l-4 border-slate-400 bg-white pl-8 py-8 pr-8">
+            <QuoteForm />
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
