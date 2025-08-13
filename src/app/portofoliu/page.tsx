@@ -5,33 +5,22 @@ import ProjectCarousel from '@/components/ProjectCarousel'
 
 export const metadata: Metadata = {
   title: 'Portofoliu - Corox Engineering | Proiecte și Referințe în Automatizări Industriale',
-  description: 'Explorează portofoliul nostru de proiecte în automatizări industriale, certificări CE și soluții tehnice integrate. Referințe și colaborări cu companii din România.',
-  keywords: 'portofoliu proiecte, referințe, automatizări industriale, certificări CE, colaborări, România',
+  description: 'Explorează portofoliul nostru de proiecte în automatizări industriale, Machine Safety și soluții tehnice integrate. Referințe și colaborări cu companii din România.',
+  keywords: 'portofoliu proiecte, referințe, automatizări industriale, Machine Safety, colaborări, România',
 }
 
 export default function Portfolio() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-slate-800 text-white relative">
-        {/* Grid Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      <section className="py-16 bg-primary text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
             Portofoliul Nostru
           </h1>
-          <p className="text-xl max-w-2xl text-left leading-relaxed text-slate-300">
-            Descoperă proiectele noastre de succes în automatizări industriale, certificări CE 
+          <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
+            Descoperă proiectele noastre de succes în automatizări industriale, Machine Safety 
             și soluții tehnice integrate pentru industria românească.
           </p>
           </div>
@@ -43,7 +32,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Proiecte Realizate
               </span>
             </div>
@@ -67,7 +56,7 @@ export default function Portfolio() {
                 iconType: "automation"
               },
               {
-                title: "Certificare CE pentru Echipamente",
+                title: "Machine Safety pentru Echipamente",
                 description: "Certificare completă CE pentru o linie de echipamente industriale, incluzând evaluări de risc și documentație tehnică.",
                 tags: ["Certificare CE", "Evaluare Risc", "Documentație"],
                 client: "Producător Echipamente",
@@ -115,7 +104,7 @@ export default function Portfolio() {
                 iconType: "automation"
               },
               {
-                title: "Certificare Mașini Speciale",
+                title: "Machine Safety pentru Mașini Speciale",
                 description: "Certificare CE pentru mașini speciale de prelucrare, incluzând măsurători de siguranță și optimizarea documentației.",
                 tags: ["Mașini Speciale", "Măsurători", "Conformitate"],
                 client: "Constructori Mașini",
@@ -160,22 +149,11 @@ export default function Portfolio() {
       </section>
 
       {/* Client Testimonials */}
-      <section className="py-20 bg-gray-50 relative">
-        {/* Subtle grid background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(55, 65, 81, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(55, 65, 81, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '20px 20px'
-          }}></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Feedback Clienți
               </span>
             </div>
@@ -192,7 +170,7 @@ export default function Portfolio() {
             <div className="border-l-4 border-slate-400 bg-white pl-6 py-8 pr-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50">
               <div className="mb-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center mr-3">
                     <div className="w-3 h-3 border-2 border-slate-300"></div>
                   </div>
                   <div>
@@ -210,7 +188,7 @@ export default function Portfolio() {
             <div className="border-l-4 border-slate-400 bg-white pl-6 py-8 pr-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50">
               <div className="mb-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center mr-3">
                     <div className="w-3 h-3 border-2 border-slate-300"></div>
                   </div>
                   <div>
@@ -228,7 +206,7 @@ export default function Portfolio() {
             <div className="border-l-4 border-slate-400 bg-white pl-6 py-8 pr-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50">
               <div className="mb-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mr-3">
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center mr-3">
                     <div className="w-3 h-3 border-2 border-slate-300"></div>
                   </div>
                   <div>
@@ -247,22 +225,11 @@ export default function Portfolio() {
       </section>
 
       {/* Collaborations */}
-      <section className="py-20 bg-white relative">
-        {/* Grid Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '30px 30px'
-          }}></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Parteneriate Industriale
               </span>
             </div>
@@ -288,7 +255,7 @@ export default function Portfolio() {
               const IconComponent = partner.icon
               return (
                 <div key={i} className="border-l-4 border-slate-300 bg-gray-50 pl-4 py-6 pr-4 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50 flex items-center justify-center group">
-                  <div className="w-10 h-10 bg-slate-700 flex items-center justify-center group-hover:bg-slate-600 transition-all duration-300">
+                  <div className="w-10 h-10 bg-primary flex items-center justify-center group-hover:bg-slate-600 transition-all duration-300">
                     <IconComponent className="w-5 h-5 text-slate-300" />
                   </div>
                 </div>
@@ -300,7 +267,7 @@ export default function Portfolio() {
           <div className="border-l-4 border-slate-400 bg-gray-50 pl-8 py-8 pr-8">
             <div className="mb-8">
               <div className="inline-block">
-                <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+                <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                   Sectoare de Activitate
                 </span>
               </div>
@@ -315,7 +282,7 @@ export default function Portfolio() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-slate-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                   <Car className="w-3 h-3 text-white" />
                 </div>
                 <div>
@@ -325,7 +292,7 @@ export default function Portfolio() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-slate-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                   <Factory className="w-3 h-3 text-white" />
                 </div>
                 <div>
@@ -335,7 +302,7 @@ export default function Portfolio() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-slate-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                   <Construction className="w-3 h-3 text-white" />
                 </div>
                 <div>
@@ -345,7 +312,7 @@ export default function Portfolio() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-slate-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                   <Settings className="w-3 h-3 text-white" />
                 </div>
                 <div>
@@ -355,12 +322,12 @@ export default function Portfolio() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-slate-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                   <Award className="w-3 h-3 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Echipamente</h4>
-                  <p className="text-sm text-gray-600">Certificări CE și evaluări de risc</p>
+                                      <p className="text-sm text-gray-600">Machine Safety și evaluări de risc</p>
                 </div>
               </div>
             </div>
@@ -369,7 +336,7 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <div className="inline-block">
@@ -387,7 +354,7 @@ export default function Portfolio() {
           </p>
           <Link 
             href="/contact" 
-            className="bg-slate-700 text-white px-8 py-4 font-semibold hover:bg-slate-600 transition-all duration-300 flex items-center space-x-3 inline-flex"
+            className="bg-primary text-white px-8 py-4 font-semibold hover:bg-slate-600 transition-all duration-300 flex items-center space-x-3 inline-flex"
           >
             <span>Contactează-ne</span>
             <ChevronRight className="w-4 h-4 text-white" />

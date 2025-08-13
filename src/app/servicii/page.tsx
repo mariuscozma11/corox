@@ -3,33 +3,22 @@ import Link from 'next/link'
 import QuoteForm from '@/components/QuoteForm'
 
 export const metadata: Metadata = {
-  title: 'Servicii - Corox Engineering | Certificări CE, Automatizări Industriale și Soluții Tehnice',
-  description: 'Servicii complete de certificări CE, automatizări industriale, sisteme metalice, instalații electrice și produse standardizate. Soluții personalizate pentru industria românească.',
-  keywords: 'certificări CE, automatizări industriale, sisteme metalice, instalații electrice, produse standardizate, evaluări de risc, România',
+  title: 'Servicii - Corox Engineering | Machine Safety, Automatizări Industriale și Soluții Tehnice',
+  description: 'Servicii complete de Machine Safety, automatizări industriale, sisteme metalice, instalații electrice și produse standardizate. Soluții personalizate pentru industria românească.',
+  keywords: 'Machine Safety, automatizări industriale, sisteme metalice, instalații electrice, produse standardizate, evaluări de risc, România',
 }
 
 export default function Services() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-slate-800 text-white relative">
-        {/* Subtle grid background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-6 relative">
+      <section className="py-16 bg-primary text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
             Serviciile Noastre
           </h1>
-          <p className="text-xl max-w-2xl text-left leading-relaxed text-slate-300">
+          <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
             Oferim o gamă completă de servicii tehnice specializate pentru industria românească, 
             cu accent pe calitate, siguranță și conformitate cu standardele europene.
           </p>
@@ -38,28 +27,17 @@ export default function Services() {
       </section>
 
       {/* Priority Service - CE Certifications */}
-      <section id="certificari" className="py-20 bg-gray-50 relative">
-        {/* Subtle grid background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(55, 65, 81, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(55, 65, 81, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '20px 20px'
-          }}></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section id="certificari" className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Serviciu Prioritar
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6 text-left">
-              Certificări CE și Evaluări de Risc
+              Machine Safety și Evaluări de Risc
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl text-left leading-relaxed">
               Servicii complete de certificare și evaluare conform standardelor europene, 
@@ -73,7 +51,7 @@ export default function Services() {
             <div className="group">
               <div className="border-l-4 border-slate-400 bg-white pl-6 py-8 pr-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50">
                 <div className="mb-6">
-                  <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                     <div className="w-3 h-3 border-2 border-slate-300"></div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 text-left">
@@ -111,7 +89,7 @@ export default function Services() {
             <div className="group">
               <div className="border-l-4 border-slate-400 bg-white pl-6 py-8 pr-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50">
                 <div className="mb-6">
-                  <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                     <div className="w-3 h-3 border-2 border-slate-300"></div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 text-left">
@@ -149,7 +127,7 @@ export default function Services() {
             <div className="group">
               <div className="border-l-4 border-slate-400 bg-white pl-6 py-8 pr-6 transition-all duration-300 hover:border-slate-600 hover:bg-slate-50">
                 <div className="mb-6">
-                  <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                  <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                     <div className="w-3 h-3 border-2 border-slate-300"></div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 text-left">
@@ -203,7 +181,7 @@ export default function Services() {
             {/* Industrial Automation */}
             <div id="automatizari" className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
               <div className="mb-8">
-                <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                   <div className="w-3 h-3 border-2 border-slate-300"></div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-left">Automatizări Industriale</h3>
@@ -255,7 +233,7 @@ export default function Services() {
             {/* Metal Systems */}
             <div id="sisteme" className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
               <div className="mb-8">
-                <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                   <div className="w-3 h-3 border-2 border-slate-300"></div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-left">Sisteme și Structuri Metalice</h3>
@@ -307,7 +285,7 @@ export default function Services() {
             {/* Electrical Installations */}
             <div id="electrice" className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
               <div className="mb-8">
-                <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                   <div className="w-3 h-3 border-2 border-slate-300"></div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-left">Automatizări și Instalații Electrice</h3>
@@ -359,7 +337,7 @@ export default function Services() {
             {/* Standardized Products */}
             <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8 lg:col-span-2">
               <div className="mb-8">
-                <div className="w-8 h-8 bg-slate-700 flex items-center justify-center mb-4">
+                <div className="w-8 h-8 bg-primary flex items-center justify-center mb-4">
                   <div className="w-3 h-3 border-2 border-slate-300"></div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-left">Produse Standardizate</h3>
@@ -412,11 +390,11 @@ export default function Services() {
       </section>
 
       {/* Quote Request Section */}
-      <section className="py-20 bg-slate-100">
+      <section className="py-20 bg-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Cerere Ofertă
               </span>
             </div>

@@ -1,44 +1,33 @@
 "use client"
 import Link from 'next/link'
-import { Award, Cog, Wrench } from 'lucide-react'
+import { Award, Cog, ShieldCheck, Wrench } from 'lucide-react'
 import QuoteForm from '@/components/QuoteForm'
 
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-slate-800 text-white relative">
-        {/* Grid Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
+      <section className="bg-primary text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-4xl pt-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
-              Soluții de Automatizare Industrială și Certificări CE
+              Soluții de Automatizare Industrială și Machine Safety
             </h1>
-            <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-slate-300">
+            <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
               Corox Engineering oferă servicii profesionale în domeniul automatizărilor industriale,
-              certificărilor CE, evaluărilor de risc și sistemelor tehnice integrate.
+              Machine Safety, evaluărilor de risc și sistemelor tehnice integrate.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6">
               <Link
                 href="/contact"
-                className="bg-slate-700 text-white px-8 py-4 font-semibold hover:bg-slate-600 transition-all duration-300 flex items-center space-x-3"
+                className="bg-secondary text-primary px-8 py-4 font-semibold hover:bg-secondary/90 transition-all duration-300 flex items-center space-x-3"
               >
                 <span>Contactează-ne</span>
               </Link>
               <Link
                 href="/servicii"
-                className="border-2 border-slate-400 text-slate-300 px-8 py-4 font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300"
+                className="border-2 border-secondary text-secondary px-8 py-4 font-semibold hover:bg-secondary hover:text-primary hover:border-primary   transition-all duration-300"
               >
                 Vezi Serviciile
               </Link>
@@ -52,7 +41,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Servicii Principale
               </span>
             </div>
@@ -66,23 +55,21 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+            <div className="border-l-4 border-slate-400 bg-gray-50 pl-8 py-8 pr-8">
               <div className="mb-6">
-                <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
-                  <Award className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Certificări CE</h3>
+               
+                  <ShieldCheck className="w-10 h-10 text-primary mb-4 flex items-center justify-center" />
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Machine Safety</h3>
                 <p className="text-gray-600 text-left leading-relaxed">
                   Servicii complete de certificare și evaluare conform standardelor europene pentru echipamente industriale.
                 </p>
               </div>
             </div>
 
-            <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+            <div className="border-l-4 border-slate-400 bg-gray-50 pl-8 py-8 pr-8">
               <div className="mb-6">
-                <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
-                  <Cog className="w-5 h-5 text-white" />
-                </div>
+                <Cog className="w-10 h-10 text-primary mb-4 flex items-center justify-center" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Automatizări Industriale</h3>
                 <p className="text-gray-600 text-left leading-relaxed">
                   Sisteme de automatizare și integrare de celule robotizate pentru optimizarea proceselor industriale.
@@ -90,11 +77,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+            <div className="border-l-4 border-slate-400 bg-gray-50 pl-8 py-8 pr-8">
               <div className="mb-6">
-                <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
-                  <Wrench className="w-5 h-5 text-white" />
-                </div>
+                <Wrench className="w-10 h-10 text-primary mb-4 flex items-center justify-center" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">Sisteme Tehnice</h3>
                 <p className="text-gray-600 text-left leading-relaxed">
                   Structuri metalice și instalații electrice pentru industria modernă și aplicații comerciale.
@@ -106,11 +91,11 @@ export default function Home() {
       </section>
 
       {/* Quote Request Section */}
-      <section className="py-20 bg-slate-100">
+      <section className="py-20 bg-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <div className="inline-block">
-              <span className="text-xs font-medium tracking-wide uppercase text-slate-600 bg-slate-200 px-3 py-1">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
                 Cerere Ofertă
               </span>
             </div>
@@ -128,5 +113,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -7,13 +7,13 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Corox Engineering - Soluții de Automatizare Industrială și Certificări CE',
-  description: 'Corox Engineering oferă soluții profesionale în domeniul automatizărilor industriale, certificărilor CE, evaluărilor de risc și sistemelor tehnice integrate.',
-  keywords: 'automatizare industrială, certificări CE, evaluări de risc, sisteme tehnice, inginerie, România',
+  title: 'Corox Engineering - Soluții de Automatizare Industrială și Machine Safety',
+  description: 'Corox Engineering oferă soluții profesionale în domeniul automatizărilor industriale, Machine Safety, evaluărilor de risc și sistemelor tehnice integrate.',
+  keywords: 'automatizare industrială, Machine Safety, evaluări de risc, sisteme tehnice, inginerie, România',
   authors: [{ name: 'Corox Engineering' }],
   openGraph: {
     title: 'Corox Engineering - Soluții de Automatizare Industrială',
-    description: 'Soluții profesionale în domeniul automatizărilor industriale și certificărilor CE',
+    description: 'Soluții profesionale în domeniul automatizărilor industriale și Machine Safety',
     type: 'website',
     locale: 'ro_RO',
   },

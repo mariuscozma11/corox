@@ -50,7 +50,7 @@ export default function QuoteForm() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-slate-400 focus:outline-none transition-all"
+                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
                 placeholder="Ex. Ion Popescu"
               />
             </div>
@@ -66,7 +66,7 @@ export default function QuoteForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-slate-400 focus:outline-none transition-all"
+                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
                 placeholder="Ex. ion.popescu@companie.ro"
               />
             </div>
@@ -81,7 +81,7 @@ export default function QuoteForm() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-slate-400 focus:outline-none transition-all"
+                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
                 placeholder="Ex. +40 123 456 789"
               />
             </div>
@@ -96,7 +96,7 @@ export default function QuoteForm() {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-slate-400 focus:outline-none transition-all"
+                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
                 placeholder="Ex. ABC Manufacturing SRL"
               />
             </div>
@@ -115,10 +115,10 @@ export default function QuoteForm() {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-slate-400 focus:outline-none transition-all"
+              className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
             >
               <option value="">Selectați un serviciu</option>
-              <option value="certificari-ce">Certificări CE și Evaluări</option>
+              <option value="machine-safety">Machine Safety și Evaluări</option>
               <option value="automatizari">Automatizări Industriale</option>
               <option value="sisteme-metalice">Sisteme și Structuri Metalice</option>
               <option value="instalatii-electrice">Automatizări și Instalații Electrice</option>
@@ -143,7 +143,7 @@ export default function QuoteForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Descrieți în detaliu proiectul, cerințele tehnice, termenele și orice alte informații relevante..."
-              className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-slate-400 focus:outline-none transition-all resize-vertical"
+              className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all resize-vertical"
             />
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function QuoteForm() {
         <div className="pt-4">
           <button
             type="submit"
-            className="w-full bg-slate-700 text-white py-4 px-6 font-medium hover:bg-slate-800 transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full bg-primary text-white py-4 px-6 font-medium hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Trimite cererea de ofertă</span>
           </button>
