@@ -3,9 +3,19 @@ import { Briefcase, MapPin, Clock, Users, TrendingUp, Award } from 'lucide-react
 import CareerApplicationForm from '@/components/CareerApplicationForm'
 
 export const metadata: Metadata = {
-  title: 'Cariere - Corox Engineering | Oportunități de Carieră în Inginerie',
-  description: 'Alătură-te echipei Corox Engineering. Oportunități de carieră în automatizări industriale, Machine Safety și soluții tehnice. Aplică pentru pozițiile disponibile.',
-  keywords: 'cariere Corox Engineering, locuri de muncă inginerie, automatizări industriale, Machine Safety, oportunități carieră, România',
+  title: 'Cariere Corox Engineering - Timișoara, Timiș | Oportunități în Automatizări Industriale',
+  description: 'Alătură-te echipei Corox Engineering din Timișoara, Timiș. Oportunități de carieră în automatizări industriale, Machine Safety și soluții tehnice. Aplică pentru pozițiile disponibile.',
+  keywords: 'cariere Corox Engineering, locuri de muncă inginerie, automatizări industriale, Machine Safety, oportunități carieră, Timișoara, Timiș, România, inginerie industrială',
+  openGraph: {
+    title: 'Cariere Corox Engineering - Timișoara, Timiș | Oportunități în Automatizări Industriale',
+    description: 'Alătură-te echipei Corox Engineering din Timișoara, Timiș. Oportunități de carieră în automatizări industriale, Machine Safety și soluții tehnice.',
+    type: 'website',
+    locale: 'ro_RO',
+    url: 'https://coroxengineering.ro/cariere',
+  },
+  alternates: {
+    canonical: 'https://coroxengineering.ro/cariere',
+  },
 }
 
 export default function Careers() {
@@ -82,10 +92,10 @@ export default function Careers() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Cariere la Corox Engineering
+              Cariere la Corox Engineering - Timișoara, Timiș
             </h1>
             <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
-              Alătură-te echipei noastre de profesioniști și contribuie la dezvoltarea 
+              Corox Engineering, cu sediul în Timișoara, Timiș, îți oferă oportunitatea de a te alătura echipei noastre de profesioniști și de a contribui la dezvoltarea 
               soluțiilor tehnice inovatoare pentru industria românească.
             </p>
           </div>

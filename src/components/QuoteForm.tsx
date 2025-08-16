@@ -29,8 +29,8 @@ export default function QuoteForm() {
 
   return (
     <div className="space-y-8">
-      {/* Form Header */}
-      <div className="border-slate-300 ">
+              {/* Form Header */}
+        <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-2">Informații Contact</h3>
         <p className="text-sm text-gray-600">Completați formularul pentru a primi o ofertă personalizată</p>
       </div>
@@ -104,7 +104,7 @@ export default function QuoteForm() {
         </div>
 
         {/* Service Selection Section */}
-        <div className="border-slate-200  space-y-4">
+        <div className="space-y-4">
           <h4 className="text-md font-semibold text-gray-900">Serviciu Solicitat</h4>
           <div className="space-y-2">
             <label htmlFor="service" className="block text-sm font-medium text-gray-900">
@@ -129,7 +129,7 @@ export default function QuoteForm() {
         </div>
 
         {/* Project Details Section */}
-        <div className="border-slate-200 space-y-4">
+        <div className="space-y-4">
           <h4 className="text-md font-semibold text-gray-900">Detalii Proiect</h4>
           <div className="space-y-2">
             <label htmlFor="message" className="block text-sm font-medium text-gray-900">
@@ -152,7 +152,7 @@ export default function QuoteForm() {
         <div className="pt-4">
           <button
             type="submit"
-            className="w-full bg-primary text-white py-4 px-6 font-medium hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2"
+            className="w-full cursor-pointer bg-primary text-white py-4 px-6 font-medium hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Trimite cererea de ofertă</span>
           </button>

@@ -21,26 +21,26 @@ export default function ProjectCard({
   const getIcon = () => {
     switch (iconType) {
       case 'automation':
-        return <Cog className="w-5 h-5 text-white" />
+        return <Cog className="w-6 h-6 text-primary" />
       case 'certification':
-        return <Award className="w-5 h-5 text-white" />
+        return <Award className="w-6 h-6 text-primary" />
       case 'metal':
-        return <Wrench className="w-5 h-5 text-white" />
+        return <Wrench className="w-6 h-6 text-primary" />
       case 'electrical':
-        return <Zap className="w-5 h-5 text-white" />
+        return <Zap className="w-6 h-6 text-primary" />
       case 'robotics':
-        return <Bot className="w-5 h-5 text-white" />
+        return <Bot className="w-6 h-6 text-primary" />
       case 'consulting':
-        return <Users className="w-5 h-5 text-white" />
+        return <Users className="w-6 h-6 text-primary" />
       default:
-        return <Cog className="w-5 h-5 text-white" />
+        return <Cog className="w-6 h-6 text-primary" />
     }
   }
 
   return (
     <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
       <div className="mb-6">
-        <div className="w-10 h-10 bg-slate-700 flex items-center justify-center mb-4">
+        <div className="w-12 h-12 flex items-center justify-center mb-4">
           {getIcon()}
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">
