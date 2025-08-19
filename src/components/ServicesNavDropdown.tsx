@@ -4,7 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { servicesNavLinks } from '@/data/services'
 
-export default function ServicesNavDropdown() {
+interface ServicesNavDropdownProps {
+	isActive?: boolean
+}
+
+export default function ServicesNavDropdown({ isActive = false }: ServicesNavDropdownProps) {
 	const [open, setOpen] = useState(false)
 	return (
 		<div
@@ -12,7 +16,14 @@ export default function ServicesNavDropdown() {
 			onMouseEnter={() => setOpen(true)}
 			onMouseLeave={() => setOpen(false)}
 		>
-			<Link href="/servicii" className="text-primary hover:text-slate-600 transition-all duration-200 font-medium whitespace-nowrap">
+			<Link 
+				href="/servicii" 
+				className={`transition-all duration-200 font-medium whitespace-nowrap ${
+					isActive 
+						? 'text-slate-800 font-bold border-b-2 border-primary pb-1' 
+						: 'text-primary hover:text-slate-600'
+				}`}
+			>
 				Servicii
 			</Link>
 			{open && (

@@ -23,6 +23,9 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Check if current page is services-related
+  const isServicesPage = pathname === '/servicii' || pathname.startsWith('/servicii/')
+
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -49,17 +52,17 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
                          <Link href="/" className={`transition-all duration-200 font-medium whitespace-nowrap ${
-               pathname === '/' ? 'text-slate-600 font-semibold' : 'text-primary hover:text-slate-600'
+               pathname === '/' ? 'text-slate-800 font-bold border-b-2 border-primary pb-1' : 'text-primary hover:text-slate-600'
              }`}>Acasă</Link>
              <Link href="/despre-noi" className={`transition-all duration-200 font-medium whitespace-nowrap ${
-               pathname === '/despre-noi' ? 'text-slate-600 font-semibold' : 'text-primary hover:text-slate-600'
+               pathname === '/despre-noi' ? 'text-slate-800 font-bold border-b-2 border-primary pb-1' : 'text-primary hover:text-slate-600'
              }`}>Despre</Link>
-             <ServicesNavDropdown />
+             <ServicesNavDropdown isActive={isServicesPage} />
              <Link href="/portofoliu" className={`transition-all duration-200 font-medium whitespace-nowrap ${
-               pathname === '/portofoliu' ? 'text-slate-600 font-semibold' : 'text-primary hover:text-slate-600'
+               pathname === '/portofoliu' ? 'text-slate-800 font-bold border-b-2 border-primary pb-1' : 'text-primary hover:text-slate-600'
              }`}>Portofoliu</Link>
              <Link href="/cariere" className={`transition-all duration-200 font-medium whitespace-nowrap ${
-               pathname === '/cariere' ? 'text-slate-600 font-semibold' : 'text-primary hover:text-slate-600'
+               pathname === '/cariere' ? 'text-slate-800 font-bold border-b-2 border-primary pb-1' : 'text-primary hover:text-slate-600'
              }`}>Cariere</Link>
                          <Link href="/contact" className="bg-primary text-white px-4 py-2 lg:px-6 lg:py-3 hover:bg-slate-600 transition-all duration-200 font-medium flex items-center space-x-2 whitespace-nowrap">
                <span>Contact</span>
@@ -86,19 +89,19 @@ export default function Navigation() {
                      <div className="md:hidden border-t-2 border-slate-100 bg-white">
             <div className="py-6 space-y-4">
                              <Link href="/" className={`block px-4 py-3 transition-all duration-200 font-medium border-l-2 border-transparent hover:border-primary ${
-                 pathname === '/' ? 'text-slate-600 font-semibold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
+                 pathname === '/' ? 'text-slate-800 font-bold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
                }`} onClick={() => setIsMenuOpen(false)}>Acasă</Link>
                <Link href="/despre-noi" className={`block px-4 py-3 transition-all duration-200 font-medium border-l-2 border-transparent hover:border-primary ${
-                 pathname === '/despre-noi' ? 'text-slate-600 font-semibold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
+                 pathname === '/despre-noi' ? 'text-slate-800 font-bold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
                }`} onClick={() => setIsMenuOpen(false)}>Despre</Link>
                <Link href="/servicii" className={`block px-4 py-3 transition-all duration-200 font-medium border-l-2 border-transparent hover:border-primary ${
-                 pathname === '/servicii' ? 'text-slate-600 font-semibold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
+                 isServicesPage ? 'text-slate-800 font-bold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
                }`} onClick={() => setIsMenuOpen(false)}>Servicii</Link>
                <Link href="/portofoliu" className={`block px-4 py-3 transition-all duration-200 font-medium border-l-2 border-transparent hover:border-primary ${
-                 pathname === '/portofoliu' ? 'text-slate-600 font-semibold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
+                 pathname === '/portofoliu' ? 'text-slate-800 font-bold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
                }`} onClick={() => setIsMenuOpen(false)}>Portofoliu</Link>
                <Link href="/cariere" className={`block px-4 py-3 transition-all duration-200 font-medium border-l-2 border-transparent hover:border-primary ${
-                 pathname === '/cariere' ? 'text-slate-600 font-semibold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
+                 pathname === '/cariere' ? 'text-slate-800 font-bold bg-slate-50 border-l-primary' : 'text-primary hover:text-slate-600 hover:bg-slate-50'
                }`} onClick={() => setIsMenuOpen(false)}>Cariere</Link>
               <div className="px-4">
                                  <Link 

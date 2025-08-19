@@ -118,11 +118,11 @@ export default function QuoteForm() {
               className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
             >
               <option value="">Selectați un serviciu</option>
-              <option value="machine-safety">Machine Safety și Evaluări</option>
-              <option value="automatizari">Automatizări Industriale</option>
-              <option value="sisteme-metalice">Sisteme și Structuri Metalice</option>
-              <option value="instalatii-electrice">Automatizări și Instalații Electrice</option>
-              <option value="produse-standardizate">Produse Standardizate</option>
+              <option value="instalatii-electrice">Instalații electrice</option>
+              <option value="machine-safety">Machine Safety</option>
+              <option value="solutii-de-automatizare">Soluții de automatizare</option>
+              <option value="proiectare-si-executie">Proiectare & execuție</option>
+              <option value="distributie">Distribuție produse & echipamente</option>
               <option value="altul">Alt serviciu</option>
             </select>
           </div>

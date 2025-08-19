@@ -28,10 +28,10 @@ export default function AboutUs() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Despre Corox Engineering - Timișoara, Timiș
+              Despre Corox Engineering 
             </h1>
             <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
-              Corox Engineering, cu sediul în Timișoara, Timiș, este dedicată oferirii de soluții tehnice de înaltă calitate
+              Corox Engineering, este dedicată oferirii de soluții tehnice de înaltă calitate
               pentru industria românească, cu accent pe inovație, siguranță și
               conformitate cu standardele europene.
             </p>
@@ -62,7 +62,7 @@ export default function AboutUs() {
                   siguranță.
                 </p>
                 <p>
-                  De-a lungul anilor, am dezvoltat o echipă de ingineri
+                  De-a lungul anilor, am dezvoltat o echipă de ingineri și colaboratori
                   specializați în diverse domenii tehnice, de la automatizări
                   industriale până la Machine Safety și evaluări de risc.
                 </p>

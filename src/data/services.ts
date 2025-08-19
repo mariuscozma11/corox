@@ -37,7 +37,7 @@ export const serviceCategories: ServiceCategory[] = [
 			},
 			{
 				name: 'Instalații electrice',
-				items: ['Proiectare', 'Execuție', 'Verificări de continuitate'],
+				items: ['Proiectare', 'Execuție', 'Mentenanță', 'Verificări și măsurători'],
 			},
 			{
 				name: 'Măsurători și verificări electrice',
@@ -55,11 +55,11 @@ export const serviceCategories: ServiceCategory[] = [
 		name: 'Machine Safety',
 		icon: ShieldCheck,
 		shortDescription:
-			'Evaluări de risc, măsurători și certificări CE pentru echipamente industriale conform standardelor europene.',
+			'Evaluări de risc, măsurători de siguranță și certificări CE pentru echipamente industriale conform standardelor europene.',
 		longDescription:
 			'Specializăm în evaluări complete de risc și certificări CE pentru echipamente industriale. Oferim măsurători de siguranță, analize conform SR EN ISO 12100 și întregul proces de certificare cu documentație tehnică completă pentru asigurarea conformității cu standardele europene.',
 		groups: [
-			{ name: 'Măsurători de siguranță', items: ['Teste electrice și funcționale', 'Verificări de protecție', 'Măsurători de izolație'] },
+			{ name: 'Măsurători de siguranță', items: ['Măsurători timp de oprire', 'Calculul distanțelor de siguranță EN ISO 13855/ANSI B11.19', 'Evaluarea vitezei maxime și RPM', 'Managementul mașinilor și memorarea protocoalelor'] },
 			{ name: 'Evaluări de risc', items: ['Analiză SR EN ISO 12100', 'Definire măsuri de reducere a riscurilor', 'Implementare soluții de protecție'] },
 			{ name: 'Certificări CE', items: ['Documentație tehnică completă', 'Marcaj CE', 'Declarație de conformitate', 'Verificări finale'] },
 		],
@@ -70,15 +70,15 @@ export const serviceCategories: ServiceCategory[] = [
 		name: 'Soluții de automatizare',
 		icon: Cog,
 		shortDescription:
-			'Soluții complete de automatizare industrială: de la concept la implementare, incluzând PLC & SCADA, roboți și mentenanță.',
+			'Soluții complete de automatizare industrială: de la concept la implementare, incluzând PLC & SCADA, roboți industriali și colaborativi, mentenanță.',
 		longDescription:
-			'Oferim servicii complete de automatizare industrială, de la proiectare și concept până la implementare și mentenanță. Specializăm în programare PLC & SCADA, integrare de roboți industriali și colaborativi, cu focus pe eficiență și siguranță.',
+			'Oferim servicii complete de automatizare industrială, de la proiectare și concept până la implementare și mentenanță. Ne specializăm în programare PLC, HMI & SCADA, integrare de roboți industriali și colaborativi, cu focus pe eficiență și siguranță.',
 		groups: [
 			{ name: 'Proiectare și concept', items: ['Analiză proces industrial', 'Specificații funcționale', 'Arhitectură sistem automatizat'] },
-			{ name: 'Programare PLC & SCADA', items: ['Siemens, Allen-Bradley', 'SCADA/HMI', 'Rețele industriale', 'Comunicare OPC'] },
-			{ name: 'Integrare roboți', items: ['Roboți industriali', 'Roboți colaborativi (coboți)', 'Sisteme de siguranță', 'Programare și calibrare'] },
+			{ name: 'Programare PLC & SCADA', items: ['Siemens, Omron, etc.', 'SCADA/HMI', 'Rețele industriale'] },
+			{ name: 'Integrare roboți', items: ['Roboți industriali', 'Roboți colaborativi (coboți)','Celule robotizate securizate', 'Sisteme de siguranță', 'Programare și calibrare'] },
 			{ name: 'Mentenanță electrică', items: ['Diagnostică preventivă', 'Intervenții curative', 'Planificare mentenanță', 'Optimizare performanță'] },
-			{ name: 'Fabricare și implementare', items: ['Asamblare panouri de comandă', 'Cablați industriale', 'Punere în funcțiune', 'Testare și validare'] },
+			{ name: 'Fabricare și implementare', items: ['Asamblare completă mecanică și electrică','Documentație tehnică', 'Punere în funcțiune', 'Testare și validare'] },
 		],
 	},
 	{
@@ -89,10 +89,10 @@ export const serviceCategories: ServiceCategory[] = [
 		shortDescription:
 			'Servicii integrate de proiectare și execuție electrică și mecanică pentru sisteme industriale.',
 		longDescription:
-			'Acoperim întregul ciclul de viață al proiectelor electrice și mecanice industriale: de la proiectare și validare până la execuție și documentație completă, cu management tehnic și de calitate conform standardelor europene.',
+			'Acoperim întregul ciclu de viață al proiectelor electrice și mecanice industriale: de la proiectare și validare până la execuție și documentație completă, cu management tehnic și de calitate conform standardelor europene.',
 		groups: [
 			{ name: 'Proiectare electrică', items: ['Proiectare circuite de comandă', 'Scheme electrice industriale', 'Calculul și dimensionarea componentelor'] },
-			{ name: 'Execuție electrică', items: ['Montaj tablouri electrice', 'Cablați industriale', 'Punere în funcțiune și testare'] },
+			{ name: 'Execuție electrică', items: ['Montaj tablouri electrice', 'Cablaj industrial', 'Punere în funcțiune și testare'] },
 			{ name: 'Proiectare mecanică', items: ['Modelare 3D parametrică', 'Desene de execuție', 'Calculul de rezistență'] },
 			{ name: 'Execuție mecanică', items: ['Montaj și asamblare', 'Calibrare și ajustare', 'Testare funcțională'] },
 		],
@@ -103,12 +103,13 @@ export const serviceCategories: ServiceCategory[] = [
 		name: 'Distribuție produse și echipamente',
 		icon: Package,
 		shortDescription:
-			'Distribuție de echipamente și componente industriale cu suport tehnic specializat și opțiuni de achiziție flexibile.',
+			'Distribuție de echipamente și componente industriale cu suport tehnic specializat, supply chain management și opțiuni de achiziție flexibile.',
 		longDescription:
-			'Asigurăm distribuția de echipamente și componente industriale de înaltă calitate, cu suport tehnic specializat și consultanță. Oferim opțiuni flexibile de achiziție, inclusiv one-time purchase pentru proiecte punctuale.',
+			'Asigurăm distribuția de echipamente și componente industriale de înaltă calitate, cu suport tehnic specializat și consultanță. Oferim servicii complete de supply chain management, fiind partenerul de încredere care facilitează achiziția produselor când fabricile nu pot accesa direct producătorii, asigurând conformitatea și distribuția eficientă.',
 		groups: [
 			{ name: 'Echipamente industriale', items: ['Echipamente de automatizare', 'Componente electrice', 'Sisteme de protecție'] },
 			{ name: 'Componente specializate', items: ['PLC și module', 'Senzori și actuatori', 'Echipamente de siguranță'] },
+			{ name: 'Supply Chain Management', items: ['Procurement intermediar', 'Verificare conformitate produse', 'Facilitare distribuție producător-fabrică'] },
 			{ name: 'Suport și servicii', items: ['Consultanță tehnică', 'Suport post-vânzare', 'Training și documentație'] },
 		],
 	},

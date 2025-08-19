@@ -7,6 +7,7 @@ interface ProjectCardProps {
   client: string
   year: string
   iconType?: 'automation' | 'certification' | 'metal' | 'electrical' | 'robotics' | 'consulting'
+  onClick?: () => void
 }
 
 export default function ProjectCard({
@@ -15,7 +16,8 @@ export default function ProjectCard({
   tags,
   client,
   year,
-  iconType = 'automation'
+  iconType = 'automation',
+  onClick,
 }: ProjectCardProps) {
   // Define specific icons for each project type
   const getIcon = () => {
@@ -38,7 +40,20 @@ export default function ProjectCard({
   }
 
   return (
-    <div className="border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8">
+    <div
+      className={`border-l-4 border-slate-300 bg-gray-50 pl-8 py-8 pr-8 h-full ${onClick ? 'cursor-pointer transition-shadow hover:shadow-lg focus-within:shadow-lg' : ''}`}
+      onClick={onClick}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : -1}
+      onKeyDown={(e) => {
+        if (!onClick) return
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
+      aria-label={onClick ? `Deschide detalii pentru proiectul ${title}` : undefined}
+    >
       <div className="mb-6">
         <div className="w-12 h-12 flex items-center justify-center mb-4">
           {getIcon()}

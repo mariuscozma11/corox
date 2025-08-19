@@ -85,7 +85,7 @@ export default function HomeContent() {
               Automatizări Industriale și Machine Safety în Timișoara și România
             </h1>
             <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
-              Corox Engineering, cu sediul în Timișoara, Timiș, oferă soluții complete de automatizare industrială,
+              Corox Engineering, cu sediul în Ghiroda, Timiș, oferă soluții complete de automatizare industrială,
               Machine Safety, evaluări de risc și sisteme tehnice integrate pentru industria românească.
             </p>
 
@@ -121,7 +121,7 @@ export default function HomeContent() {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl text-left leading-relaxed">
               Suntem specializați în oferirea de soluții tehnice integrate pentru industria românească,
-              cu accent pe calitate, siguranță și conformitate cu standardele europene. Cu sediul în Timișoara, Timiș,
+              cu accent pe calitate, siguranță și conformitate cu standardele europene. Cu sediul în Ghiroda, Timiș,
               servim clienții din toată România cu soluții de automatizare industrială și Machine Safety de înaltă calitate.
             </p>
           </div>

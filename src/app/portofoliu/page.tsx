@@ -36,7 +36,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Portofoliu Proiecte - Timișoara, Timiș și România
+              Portofoliu Proiecte 
             </h1>
             <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
               Descoperă proiectele noastre de succes în automatizări
@@ -76,6 +76,11 @@ export default function Portfolio() {
                 client: "Industrie de Producție",
                 year: "2023",
                 iconType: "automation",
+                images: [
+                  { src: "/next.svg", alt: "Ecran SCADA" },
+                  { src: "/vercel.svg", alt: "Arhitectură sistem" },
+                  { src: "/logo-color.svg", alt: "Siglă proiect" },
+                ],
               },
               {
                 title: "Machine Safety pentru Echipamente",
@@ -85,6 +90,11 @@ export default function Portfolio() {
                 client: "Producător Echipamente",
                 year: "2023",
                 iconType: "certification",
+                images: [
+                  { src: "/ISO_9001-2015.svg", alt: "Certificare" },
+                  { src: "/anpc-sal.svg", alt: "Standard" },
+                  { src: "/file.svg" },
+                ],
               },
               {
                 title: "Structuri Metalice Industriale",
@@ -94,6 +104,10 @@ export default function Portfolio() {
                 client: "Industrie Construcții",
                 year: "2022",
                 iconType: "metal",
+                images: [
+                  { src: "/window.svg", alt: "Structură" },
+                  { src: "/globe.svg", alt: "Vedere generală" },
+                ],
               },
               {
                 title: "Instalații Electrice Industriale",
@@ -112,6 +126,10 @@ export default function Portfolio() {
                 client: "Industrie Auto",
                 year: "2021",
                 iconType: "robotics",
+                images: [
+                  { src: "/logo-seitel.webp", alt: "Celulă robotizată" },
+                  { src: "/logo-color.svg" },
+                ],
               },
               {
                 title: "Consultanță Tehnică și Optimizare",
@@ -277,18 +295,26 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      {/* Quote Request Section */}
+      <section className="py-20 bg-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Cerere de Ofertă
+          <div className="mb-16">
+            <div className="inline-block">
+              <span className="text-xs font-medium tracking-wide uppercase text-white bg-primary px-3 py-1">
+                Cerere Ofertă
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6 text-left">
+              Cerere de Ofertă  
             </h2>
-            <p className="text-lg text-gray-600">
-              Completați formularul de mai jos pentru a primi o ofertă
-              personalizată pentru serviciile de care aveți nevoie
+            <p className="text-lg text-gray-600 max-w-2xl text-left leading-relaxed">
+              Contactați-ne pentru o ofertă personalizată pentru proiectul dumneavoastră.
+              Echipa noastră vă va contacta în maxim 24 de ore.
             </p>
           </div>
-          <QuoteForm />
+          <div className="border-l-4 border-slate-400 bg-white pl-8 py-8 pr-8">
+            <QuoteForm />
+          </div>
         </div>
       </section>    
     </div>

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import ProjectCard from './ProjectCard'
+import ProjectModal, { ProjectDetail } from './ProjectModal'
 
 interface Project {
   title: string
@@ -11,6 +12,7 @@ interface Project {
   client: string
   year: string
   iconType: 'automation' | 'certification' | 'metal' | 'electrical' | 'robotics' | 'consulting'
+  images?: { src: string; alt?: string }[]
 }
 
 interface ProjectCarouselProps {
@@ -20,6 +22,7 @@ interface ProjectCarouselProps {
 export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [openProject, setOpenProject] = useState<ProjectDetail | null>(null)
   const carouselRef = useRef<HTMLDivElement>(null)
 
   // Calculate how many cards to show based on screen size
@@ -94,6 +97,25 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
     }
   }
 
+  const openModalFor = (p: Project) => {
+    const images = p.images && p.images.length > 0
+      ? p.images
+      : [
+          { src: '/next.svg', alt: p.title },
+          { src: '/vercel.svg', alt: p.title },
+        ]
+
+    const detail: ProjectDetail = {
+      title: p.title,
+      description: p.description,
+      images,
+      tags: p.tags,
+      client: p.client,
+      year: p.year,
+    }
+    setOpenProject(detail)
+  }
+
   return (
     <div className="relative">
       {/* Navigation Arrows */}
@@ -149,6 +171,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
                   client={project.client}
                   year={project.year}
                   iconType={project.iconType}
+                  onClick={() => openModalFor(project)}
                 />
               </div>
             </div>
@@ -179,6 +202,8 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
           {currentIndex + 1} din {maxIndex + 1}
         </span>
       </div>
+
+      <ProjectModal open={!!openProject} onClose={() => setOpenProject(null)} project={openProject} />
     </div>
   )
 }
