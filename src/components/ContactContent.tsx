@@ -11,10 +11,10 @@ export default function ContactContent() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Contactează-ne - Timișoara, Timiș
+              Contactează-ne
             </h1>
             <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
-              Corox Engineering, cu sediul în Timișoara, Timiș, este aici să vă ajutăm cu soluțiile tehnice de care aveți
+              Corox Engineering, cu sediul în Ghiroda, Timiș, este aici să vă ajutăm cu soluțiile tehnice de care aveți
               nevoie. Contactați-ne pentru o consultație gratuită sau o ofertă
               personalizată.
             </p>

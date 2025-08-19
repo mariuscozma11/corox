@@ -68,132 +68,130 @@ export default function Portfolio() {
 
           <ProjectCarousel
             projects={[
+              // {
+              //   title: "Sistem de Automatizare Industrială",
+              //   description:
+              //     "Implementare sistem SCADA complet pentru o fabrică de producție, incluzând monitorizare în timp real și control automat al proceselor.",
+              //   tags: ["SCADA", "PLC", "HMI"],
+              //   client: "Industrie de Producție",
+              //   year: "2023",
+              //   iconType: "automation",
+              //   images: [
+              //     { src: "/next.svg", alt: "Ecran SCADA" },
+              //     { src: "/vercel.svg", alt: "Arhitectură sistem" },
+              //     { src: "/logo-color.svg", alt: "Siglă proiect" },
+              //   ],
+              // },
               {
-                title: "Sistem de Automatizare Industrială",
-                description:
-                  "Implementare sistem SCADA complet pentru o fabrică de producție, incluzând monitorizare în timp real și control automat al proceselor.",
-                tags: ["SCADA", "PLC", "HMI"],
-                client: "Industrie de Producție",
+                title: "Conveior cu banda",
+                description: "Conveior cu banda",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
                 year: "2023",
                 iconType: "automation",
                 images: [
-                  { src: "/next.svg", alt: "Ecran SCADA" },
-                  { src: "/vercel.svg", alt: "Arhitectură sistem" },
-                  { src: "/logo-color.svg", alt: "Siglă proiect" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
                 ],
               },
               {
-                title: "Machine Safety pentru Echipamente",
-                description:
-                  "Certificare completă CE pentru o linie de echipamente industriale, incluzând evaluări de risc și documentație tehnică.",
-                tags: ["Certificare CE", "Evaluare Risc", "Documentație"],
-                client: "Producător Echipamente",
-                year: "2023",
-                iconType: "certification",
-                images: [
-                  { src: "/ISO_9001-2015.svg", alt: "Certificare" },
-                  { src: "/anpc-sal.svg", alt: "Standard" },
-                  { src: "/file.svg" },
-                ],
-              },
-              {
-                title: "Structuri Metalice Industriale",
-                description:
-                  "Proiectare și construcție de structuri metalice pentru o hala industrială, cu sisteme de susținere și montaje specializate.",
-                tags: ["Structuri Metalice", "Construcții", "Montaje"],
-                client: "Industrie Construcții",
-                year: "2022",
-                iconType: "metal",
-                images: [
-                  { src: "/window.svg", alt: "Structură" },
-                  { src: "/globe.svg", alt: "Vedere generală" },
-                ],
-              },
-              {
-                title: "Instalații Electrice Industriale",
-                description:
-                  "Instalații electrice complete pentru o fabrică de procesare, incluzând tablouri electrice și sisteme de protecție.",
-                tags: ["Instalații Electrice", "Tablouri", "Protecții"],
-                client: "Industrie Procesare",
-                year: "2022",
-                iconType: "electrical",
-              },
-              {
-                title: "Celulă Robotizată de Producție",
-                description:
-                  "Integrare completă a unei celule robotizate pentru operații de asamblare, cu sisteme de siguranță și control automat.",
-                tags: ["Roboți", "Asamblare", "Siguranță"],
-                client: "Industrie Auto",
-                year: "2021",
-                iconType: "robotics",
-                images: [
-                  { src: "/logo-seitel.webp", alt: "Celulă robotizată" },
-                  { src: "/logo-color.svg" },
-                ],
-              },
-              {
-                title: "Consultanță Tehnică și Optimizare",
-                description:
-                  "Servicii de consultanță tehnică pentru optimizarea proceselor de producție și implementarea de soluții inovatoare.",
-                tags: ["Consultanță", "Optimizare", "Inovație"],
-                client: "Industrie Diversificată",
-                year: "2021",
-                iconType: "consulting",
-              },
-              {
-                title: "Modernizare Linie de Producție",
-                description:
-                  "Modernizarea completă a unei linii de producție cu sisteme de automatizare avansate și monitorizare digitală.",
-                tags: ["Modernizare", "Digitalizare", "IoT"],
-                client: "Industrie Alimentară",
+                title: "Conveior cu role",
+                description: "Conveior cu role",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
                 year: "2023",
                 iconType: "automation",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
               },
               {
-                title: "Machine Safety pentru Mașini Speciale",
-                description:
-                  "Certificare CE pentru mașini speciale de prelucrare, incluzând măsurători de siguranță și optimizarea documentației.",
-                tags: ["Mașini Speciale", "Măsurători", "Conformitate"],
-                client: "Constructori Mașini",
+                title: "Insertie masa acustica",
+                description: "Insertie masa acustica",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
                 year: "2023",
-                iconType: "certification",
+                iconType: "automation",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
               },
               {
-                title: "Platformă Logistică Automatizată",
-                description:
-                  "Proiectare și implementare structuri metalice pentru centru logistic cu sisteme de transport automatizat.",
-                tags: ["Logistică", "Transport", "Automatizare"],
-                client: "Industrie Logistică",
-                year: "2022",
+                title: "Dispozitiv de dezinfectie",
+                description: "Dispozitiv de dezinfectie",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
+                year: "2023",
+                iconType: "automation",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
+              },
+              {
+                title: "Dispozitiv de curatare cu aer ionizat",
+                description: "Dispozitiv de curatare cu aer ionizat pentru faruri auto",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
+                year: "2023",
+                iconType: "automation",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
+              },
+              {
+                title: "Dispozitiv de testare senzori",
+                description: "Dispozitiv de testare senzori de proximitate",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
+                year: "2023",
+                iconType: "automation",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
+              },
+              {
+                title: "Dispozitiv de capsare conector senzori",
+                description: "Dispozitiv de capsare conector senzor",
+                tags: ["Automatizare", "PLC", "Conveyor"],
+                client: "Client",
+                year: "2023",
+                iconType: "automation",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
+              },
+              {
+                title: "Scara mobila",
+                description: "Scara mobila",
+                tags: ["Structuri", "Proiectare", "Executie"],
+                client: "Client",
+                year: "2023",
                 iconType: "metal",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
               },
               {
-                title: "Sistem de Distribuție Electrică",
-                description:
-                  "Implementare sistem complex de distribuție electrică pentru complex industrial cu multiple facilități de producție.",
-                tags: ["Distribuție", "Rețele", "Smart Grid"],
-                client: "Complex Industrial",
-                year: "2022",
-                iconType: "electrical",
-              },
-              {
-                title: "Robot de Sudură Colaborativ",
-                description:
-                  "Integrarea unui robot colaborativ pentru operații de sudură de precizie în industria aeronautică.",
-                tags: ["Cobot", "Sudură", "Precizie"],
-                client: "Industrie Aeronautică",
-                year: "2021",
+                title: "Injectie cu robot industrial",
+                description: "Injectie cu robot industrial",
+                tags: ["Robot industrial", "Proiectare", "PLC"],
+                client: "Client",
+                year: "2023",
                 iconType: "robotics",
+                images: [
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                ],
               },
-              {
-                title: "Audit și Eficiență Energetică",
-                description:
-                  "Audit energetic complet și implementare măsuri de eficiență pentru reducerea consumurilor industriale.",
-                tags: ["Audit", "Eficiență", "Sustenabilitate"],
-                client: "Industrie Chimică",
-                year: "2021",
-                iconType: "consulting",
-              },
+
+              
             ]}
           />
         </div>
@@ -224,7 +222,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                <Car className="w-6 h-6 text-primary" />
+                <Car className="w-8 h-8 text-primary" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">
@@ -238,7 +236,7 @@ export default function Portfolio() {
 
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                <Factory className="w-6 h-6 text-primary" />
+                <Factory className="w-8 h-8 text-primary" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">
@@ -252,7 +250,7 @@ export default function Portfolio() {
 
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                <Construction className="w-6 h-6 text-primary" />
+                <Construction className="w-8 h-8 text-primary" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">
@@ -266,7 +264,7 @@ export default function Portfolio() {
 
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                <Settings className="w-6 h-6 text-primary" />
+                <Settings className="w-8 h-8 text-primary" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">
@@ -280,7 +278,7 @@ export default function Portfolio() {
 
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                <Award className="w-6 h-6 text-primary" />
+                <Award className="w-8 h-8 text-primary" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">

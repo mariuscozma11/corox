@@ -18,71 +18,50 @@ export const metadata: Metadata = {
   },
 }
 
+type JobOpening = {
+  id: number
+  title: string
+  department: string
+  location: string
+  type: string
+  experience: string
+  description: string
+  requirements: string[]
+}
+
 export default function Careers() {
-  const jobOpenings = [
-    {
-      id: 1,
-      title: "Inginer Machine Safety",
-      department: "Engineering",
-      location: "Ghiroda, Timiș",
-      type: "Full-time",
-      experience: "2-4 ani",
-      description: "Căutăm un inginer specializat în Machine Safety pentru evaluări de risc și implementarea standardelor de siguranță pentru echipamente industriale.",
-      requirements: [
-        "Diplomă în Inginerie Mecanică, Electrică sau domeniu similar",
-        "Experiență în Machine Safety și evaluări de risc",
-        "Cunoașterea standardelor europene de siguranță",
-        "Abilități analitice și atenție la detalii"
-      ]
-    },
-    {
-      id: 2,
-      title: "Inginer Automatizări Industriale",
-      department: "Engineering", 
-      location: "Ghiroda, Timiș",
-      type: "Full-time",
-      experience: "3-5 ani",
-      description: "Poziție pentru dezvoltarea și implementarea sistemelor de automatizare industrială, PLC, SCADA și HMI.",
-      requirements: [
-        "Diplomă în Automatică, Electronică sau Inginerie Electrică",
-        "Experiență cu sisteme PLC (Siemens, Allen-Bradley)",
-        "Cunoștințe SCADA și HMI",
-        "Experiență în programarea și configurarea sistemelor automate"
-      ]
-    },
-    {
-      id: 3,
-      title: "Tehnician Sisteme Electrice",
-      department: "Technical",
-      location: "Ghiroda, Timiș", 
-      type: "Full-time",
-      experience: "1-3 ani",
-      description: "Suport tehnic pentru instalații electrice industriale și mentenanța sistemelor electrice existente.",
-      requirements: [
-        "Studii tehnice în domeniul electric",
-        "Experiență în instalații electrice industriale",
-        "Cunoștințe de bază AutoCAD",
-        "Permis de conducere categoria B"
-      ]
-    }
+  const jobOpenings: JobOpening[] = [
+    // Example structure left commented for future use
+    // {
+    //   id: 1,
+    //   title: 'Inginer Machine Safety',
+    //   department: 'Engineering',
+    //   location: 'Ghiroda, Timiș',
+    //   type: 'Full-time',
+    //   experience: '2-4 ani',
+    //   description: 'Căutăm un inginer specializat în Machine Safety...',
+    //   requirements: ['Diplomă', 'Experiență', 'Standardele', 'Atenție la detalii']
+    // },
   ]
+
+  const hasOpenings = jobOpenings.length > 0
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Dezvoltare Profesională",
-      description: "Oportunități de formare continuă și avansare în carieră"
+      title: 'Dezvoltare Profesională',
+      description: 'Oportunități de formare continuă și avansare în carieră',
     },
     {
       icon: Users,
-      title: "Echipă Dinamică",
-      description: "Lucrează alături de profesioniști experimentați"
+      title: 'Echipă Dinamică',
+      description: 'Lucrează alături de profesioniști experimentați',
     },
     {
       icon: Award,
-      title: "Proiecte Inovatoare",
-      description: "Participă la proiecte tehnologice de vârf"
-    }
+      title: 'Proiecte Inovatoare',
+      description: 'Participă la proiecte tehnologice de vârf',
+    },
   ]
 
   return (
@@ -155,61 +134,78 @@ export default function Careers() {
             </p>
           </div>
 
-          <div className="space-y-8">
-            {jobOpenings.map((job) => (
-              <div key={job.id} className="border-l-4 border-slate-400 bg-white pl-8 py-8 pr-8">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-start gap-4 mb-4">
-                      <Briefcase className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-                          <span className="flex items-center gap-1">
-                            <MapPin className="w-4 h-4" />
-                            {job.location}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {job.type}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Users className="w-4 h-4" />
-                            {job.experience} experiență
-                          </span>
+          {hasOpenings ? (
+            <div className="space-y-8">
+              {jobOpenings.map((job: JobOpening) => (
+                <div key={job.id} className="border-l-4 border-slate-400 bg-white pl-8 py-8 pr-8">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+                    <div className="flex-1">
+                      <div className="flex items-start gap-4 mb-4">
+                        <Briefcase className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
+                          <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
+                            <span className="flex items-center gap-1">
+                              <MapPin className="w-4 h-4" />
+                              {job.location}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-4 h-4" />
+                              {job.type}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Users className="w-4 h-4" />
+                              {job.experience} experiență
+                            </span>
+                          </div>
                         </div>
+                      </div>
+                      
+                      <p className="text-gray-600 leading-relaxed mb-6">
+                        {job.description}
+                      </p>
+                      
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3">Cerințe:</h4>
+                        <ul className="space-y-2">
+                          {job.requirements.map((req: string, idx: number) => (
+                            <li key={idx} className="flex items-start space-x-3">
+                              <div className="w-1 h-1 bg-slate-400 mt-2 flex-shrink-0"></div>
+                              <span className="text-sm text-gray-600">{req}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      {job.description}
-                    </p>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Cerințe:</h4>
-                      <ul className="space-y-2">
-                        {job.requirements.map((req, index) => (
-                          <li key={index} className="flex items-start space-x-3">
-                            <div className="w-1 h-1 bg-slate-400 mt-2 flex-shrink-0"></div>
-                            <span className="text-sm text-gray-600">{req}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="lg:w-48">
+                      <a
+                        href="#apply"
+                        className="w-full bg-primary text-white px-6 py-3 font-semibold hover:bg-slate-600 transition-all duration-300 inline-flex items-center justify-center"
+                      >
+                        Aplică Acum
+                      </a>
                     </div>
                   </div>
-                  
-                  <div className="lg:w-48">
-                    <a
-                      href="#apply"
-                      className="w-full bg-primary text-white px-6 py-3 font-semibold hover:bg-slate-600 transition-all duration-300 inline-flex items-center justify-center"
-                    >
-                      Aplică Acum
-                    </a>
-                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="border-l-4 border-slate-400 bg-white pl-8 py-8 pr-8">
+              <div className="flex items-start gap-4">
+                <Briefcase className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Momentan nu avem poziții deschise</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                    Îți mulțumim pentru interes. Dacă dorești să ni te alături, trimite-ne o aplicație spontană folosind formularul de mai jos sau contactează-ne.
+                  </p>
+                  <a href="#apply" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold hover:bg-slate-600 transition-all duration-300">
+                    Aplică Spontan
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
