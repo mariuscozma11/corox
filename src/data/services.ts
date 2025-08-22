@@ -45,7 +45,7 @@ export const serviceCategories: ServiceCategory[] = [
 			},
 			{
 				name: 'Documentație și siguranță',
-				items: ['Întocmirea documentației pentru siguranță', 'Verificarea echipamentului de protecție', 'Protecția împotriva descărcărilor electrice'],
+				items: ['Întocmirea documentației', 'Verificarea echipamentului de protecție', 'Protecția împotriva descărcărilor electrice'],
 			},
 		],
 	},
@@ -57,10 +57,10 @@ export const serviceCategories: ServiceCategory[] = [
 		shortDescription:
 			'Evaluări de risc, măsurători de siguranță și certificări CE pentru echipamente industriale conform standardelor europene.',
 		longDescription:
-			'Specializăm în evaluări complete de risc și certificări CE pentru echipamente industriale. Oferim măsurători de siguranță, analize conform SR EN ISO 12100 și întregul proces de certificare cu documentație tehnică completă pentru asigurarea conformității cu standardele europene.',
+			'Specializăm în evaluări complete de risc și certificări CE pentru echipamente industriale. Oferim măsurători de siguranță, analize conform DIRECTIVA 2006/42/CE  și întregul proces de certificare cu documentație tehnică completă pentru asigurarea conformității cu standardele europene.',
 		groups: [
 			{ name: 'Măsurători de siguranță', items: ['Măsurători timp de oprire', 'Calculul distanțelor de siguranță EN ISO 13855/ANSI B11.19', 'Evaluarea vitezei maxime și RPM', 'Managementul mașinilor și memorarea protocoalelor'] },
-			{ name: 'Evaluări de risc', items: ['Analiză SR EN ISO 12100', 'Definire măsuri de reducere a riscurilor', 'Implementare soluții de protecție'] },
+			{ name: 'Evaluări de risc', items: ['Analiza factorilor de risc', 'Definire măsuri de reducere a riscurilor', 'Implementare soluții de protecție'] },
 			{ name: 'Certificări CE', items: ['Documentație tehnică completă', 'Marcaj CE', 'Declarație de conformitate', 'Verificări finale'] },
 		],
 	},
@@ -93,7 +93,7 @@ export const serviceCategories: ServiceCategory[] = [
 		groups: [
 			{ name: 'Proiectare electrică', items: ['Proiectare circuite de comandă', 'Scheme electrice industriale', 'Calculul și dimensionarea componentelor'] },
 			{ name: 'Execuție electrică', items: ['Montaj tablouri electrice', 'Cablaj industrial', 'Punere în funcțiune și testare'] },
-			{ name: 'Proiectare mecanică', items: ['Modelare 3D parametrică', 'Desene de execuție', 'Calculul de rezistență'] },
+			{ name: 'Proiectare mecanică', items: ['Modelare 3D parametrică', 'Desene de execuție'] },
 			{ name: 'Execuție mecanică', items: ['Montaj și asamblare', 'Calibrare și ajustare', 'Testare funcțională'] },
 		],
 	},

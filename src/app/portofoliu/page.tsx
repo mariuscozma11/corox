@@ -289,6 +289,20 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                <Settings className="w-8 h-8 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-1">
+                  Industrie Instalații Electrice
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Industrie de instalații electrice.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

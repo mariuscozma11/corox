@@ -13,28 +13,54 @@ export default function CareerApplicationForm() {
     education: '',
     availability: '',
     coverLetter: '',
-    cvFile: null as File | null,
     consent: false
   })
+  const [submitting, setSubmitting] = useState(false)
+  const [result, setResult] = useState<string | null>(null)
+  const [showSuccess, setShowSuccess] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log('Career application submitted:', formData)
-    alert('Mulțumim pentru aplicație! Vă vom contacta în curând.')
-    setFormData({ 
-      firstName: '', 
-      lastName: '', 
-      email: '', 
-      phone: '', 
-      position: '', 
-      experience: '', 
-      education: '', 
-      availability: '', 
-      coverLetter: '', 
-      cvFile: null,
-      consent: false 
-    })
+    e.stopPropagation()
+
+    try {
+      setSubmitting(true)
+      setResult(null)
+
+      const res = await fetch('https://formcarry.com/s/YoQC-Ps4OFl', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          email: formData.email,
+          message: `Telefon: ${formData.phone}\nPoziție: ${formData.position}\nExperiență: ${formData.experience}\nEducație: ${formData.education}\nDisponibilitate: ${formData.availability}\n\nScrisoare:\n${formData.coverLetter}`
+        })
+      })
+      
+      // Check if the response is ok (status 200-299)
+      if (res.ok) {
+        setShowSuccess(true)
+        setFormData({ 
+          firstName: '', lastName: '', email: '', phone: '', position: '', experience: '', education: '', availability: '', coverLetter: '', consent: false 
+        })
+        e.currentTarget.reset()
+      } else {
+        // Try to get error details from response
+        try {
+          const json = await res.json()
+          setResult(json?.message || `Eroare ${res.status}: ${res.statusText}`)
+        } catch {
+          setResult(`Eroare ${res.status}: ${res.statusText}`)
+        }
+      }
+    } catch (err) {
+      setResult('Eroare de rețea. Încearcă din nou mai târziu.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -45,12 +71,26 @@ export default function CareerApplicationForm() {
     })
   }
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] || null
-    setFormData({
-      ...formData,
-      cvFile: file
-    })
+
+
+  if (showSuccess) {
+    return (
+      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+        <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+          <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-medium text-green-800 mb-2">Aplicație trimisă cu succes!</h3>
+        <p className="text-green-700">Mulțumim! Aplicația ta a fost trimisă cu succes. Te vom contacta în curând!</p>
+        <button
+          onClick={() => setShowSuccess(false)}
+          className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+        >
+          Trimite o altă aplicație
+        </button>
+      </div>
+    )
   }
 
   return (
@@ -149,9 +189,6 @@ export default function CareerApplicationForm() {
                 className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all"
               >
                 <option value="">Selectează poziția</option>
-                <option value="inginer-machine-safety">Inginer Machine Safety</option>
-                <option value="inginer-automatizari">Inginer Automatizări Industriale</option>
-                <option value="tehnician-sisteme-electrice">Tehnician Sisteme Electrice</option>
                 <option value="alta-pozitie">Altă poziție</option>
               </select>
             </div>
@@ -220,7 +257,7 @@ export default function CareerApplicationForm() {
           </div>
         </div>
 
-        {/* Cover Letter Section */}
+        {/* Scrisoare de Intenție */}
         <div className="space-y-4">
           <h4 className="text-md font-semibold text-gray-900">Scrisoare de Intenție</h4>
           <div className="space-y-2">
@@ -234,39 +271,9 @@ export default function CareerApplicationForm() {
               rows={6}
               value={formData.coverLetter}
               onChange={handleChange}
-              placeholder="Descrie motivația ta pentru această poziție, experiența relevantă și ce poți aduce echipei noastre..."
+              placeholder="Descrie motivația ta pentru această poziție..."
               className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all resize-vertical"
             />
-          </div>
-        </div>
-
-        {/* CV Upload Section */}
-        <div className="space-y-4">
-          <h4 className="text-md font-semibold text-gray-900">CV și Documente</h4>
-          <div className="space-y-2">
-            <label htmlFor="cvFile" className="block text-sm font-medium text-gray-900">
-              CV/Resume *
-            </label>
-            <div className="space-y-3">
-              <input
-                type="file"
-                id="cvFile"
-                name="cvFile"
-                required
-                accept=".pdf,.doc,.docx"
-                onChange={handleFileChange}
-                className="w-full px-4 py-3 border-2 border-slate-200 bg-white focus:border-primary focus:outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-medium file:bg-primary file:text-white hover:file:bg-slate-600 file:cursor-pointer"
-              />
-              <div className="text-xs text-gray-500 space-y-1">
-                <p>Formate acceptate: PDF, DOC, DOCX</p>
-                <p>Dimensiunea maximă: 5 MB</p>
-                {formData.cvFile && (
-                  <p className="text-primary font-medium">
-                    Fișier selectat: {formData.cvFile.name}
-                  </p>
-                )}
-              </div>
-            </div>
           </div>
         </div>
 
@@ -293,10 +300,14 @@ export default function CareerApplicationForm() {
         <div className="pt-4">
           <button
             type="submit"
-            className="w-full bg-primary text-white py-4 px-6 font-medium hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2"
+            disabled={submitting}
+            className="w-full bg-primary text-white py-4 px-6 font-medium hover:bg-slate-600 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-60"
           >
-            <span>Trimite Aplicația</span>
+            <span>{submitting ? 'Se trimite...' : 'Trimite Aplicația'}</span>
           </button>
+          {result && (
+            <p className="mt-3 text-sm text-gray-700">{result}</p>
+          )}
         </div>
 
         {/* Form Footer */}
