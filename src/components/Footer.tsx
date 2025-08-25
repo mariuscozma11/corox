@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { Mail, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { servicesNavLinks } from '@/data/services'
-import { useState } from 'react';
+import { servicesNavLinks } from "@/data/services";
+import { useState } from "react";
 
 export default function Footer() {
   const [isIsoDialogOpen, setIsIsoDialogOpen] = useState(false);
@@ -54,6 +54,8 @@ export default function Footer() {
                       Corox Engineering SRL
                     </p>
                     <p className="text-sm text-slate-400">
+                      RO30619298 / J2012002129351
+                      <br />
                       Str. Calea Lugojului Nr 134/3
                       <br />
                       Ghiroda, Timiș, România
@@ -170,96 +172,105 @@ export default function Footer() {
               © {new Date().getFullYear()} Corox Engineering SRL. Toate
               drepturile rezervate.
             </p>
-                         <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-               <Link href="/termene-si-conditii" className="text-white/80 hover:text-white transition-colors text-sm">
-                 Termene și condiții
-               </Link>
-               <Link href="/politica-cookies" className="text-white/80 hover:text-white transition-colors text-sm">
-                 Politica cookies
-               </Link>
-               <div className="flex lg:flex-row flex-col gap-2 space-x-2">
-                 <Link 
-                   href="https://anpc.ro/ce-este-sal/" 
-                   target="_blank" 
-                   rel="nofollow"
-                   className="flex items-center"
-                 >
-                   <Image
-                     src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sal.svg"
-                     alt="Soluționarea Alternativă a Litigiilor"
-                     width={250}
-                     height={100}
-                     className="h-8 w-auto"
-                   />
-                 </Link>
-                 <Link 
-                   href="https://ec.europa.eu/consumers/odr" 
-                   target="_blank" 
-                   rel="nofollow"
-                   className="flex items-center"
-                 >
-                   <Image
-                     src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sol.svg"
-                     alt="Soluționarea Online a Litigiilor"
-                     width={250}
-                     height={100}
-                     className="h-8 w-auto"
-                   />
-                 </Link>
-                                   <button
-                    onClick={() => setIsIsoDialogOpen(true)}
-                    className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
-                    title="Click to view larger"
-                  >
-                    <Image
-                      src="/ISO_9001-2015.svg"
-                      alt="ISO 9001:2015 Certified"
-                      width={80}
-                      height={80}
-                      className="h-8 w-auto"
-                    />
-                  </button>
-               </div>
-             </div>
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <Link
+                href="/politica-de-conf"
+                className="text-white/80 hover:text-white transition-colors text-sm"
+              >
+                Politica de Confidențialitate
+              </Link>
+              <Link
+                href="/politica-cookies"
+                className="text-white/80 hover:text-white transition-colors text-sm"
+              >
+                Politica Cookies
+              </Link>
+              <div className="flex lg:flex-row flex-col gap-2 space-x-2">
+                <Link
+                  href="https://anpc.ro/ce-este-sal/"
+                  target="_blank"
+                  rel="nofollow"
+                  className="flex items-center"
+                >
+                  <Image
+                    src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sal.svg"
+                    alt="Soluționarea Alternativă a Litigiilor"
+                    width={250}
+                    height={100}
+                    className="h-8 w-auto"
+                  />
+                </Link>
+                <Link
+                  href="https://ec.europa.eu/consumers/odr"
+                  target="_blank"
+                  rel="nofollow"
+                  className="flex items-center"
+                >
+                  <Image
+                    src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sol.svg"
+                    alt="Soluționarea Online a Litigiilor"
+                    width={250}
+                    height={100}
+                    className="h-8 w-auto"
+                  />
+                </Link>
+                <button
+                  onClick={() => setIsIsoDialogOpen(true)}
+                  className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
+                  title="Click to view larger"
+                >
+                  <Image
+                    src="/ISO_9001-2015.svg"
+                    alt="ISO 9001:2015 Certified"
+                    width={80}
+                    height={80}
+                    className="h-8 w-auto"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
-                 </div>
-       </div>
+        </div>
+      </div>
 
-       {/* ISO Certification Dialog */}
-       {isIsoDialogOpen && (
-         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-auto">
-             <div className="flex justify-between items-center p-6 border-b border-gray-200">
-               <h3 className="text-xl font-semibold text-gray-900">
-                 ISO 9001:2015 Certification
-               </h3>
-               <button
-                 onClick={() => setIsIsoDialogOpen(false)}
-                 className="text-gray-400 hover:text-gray-600 transition-colors"
-               >
-                 <X className="w-6 h-6" />
-               </button>
-             </div>
-             <div className="p-6 text-center">
-               <Image
-                 src="/ISO_9001-2015.svg"
-                 alt="ISO 9001:2015 Certified - Full Size"
-                 width={400}
-                 height={400}
-                 className="w-full h-auto max-w-md mx-auto"
-               />
-               <div className="mt-6 text-gray-600">
-                 <p className="font-medium mb-2">Corox Engineering SRL</p>
-                 <p className="text-sm">Certified to ISO 9001:2015 Quality Management System</p>
-                 <p className="text-sm mt-2">
-                   This certification demonstrates our commitment to quality, continuous improvement, 
-                   and customer satisfaction in all our industrial automation and Machine Safety services.
-                 </p>
-               </div>
-             </div>
-           </div>
-         </div>
-       )}
-     </footer>
-   );
- }
+      {/* ISO Certification Dialog */}
+      {isIsoDialogOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-auto">
+            <div className="flex justify-between items-center p-6 border-b border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900">
+                ISO 9001:2015 Certification
+              </h3>
+              <button
+                onClick={() => setIsIsoDialogOpen(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="p-6 text-center">
+              <Image
+                src="/ISO_9001-2015.svg"
+                alt="ISO 9001:2015 Certified - Full Size"
+                width={400}
+                height={400}
+                className="w-full h-auto max-w-md mx-auto"
+              />
+              <div className="mt-6 text-gray-600">
+                <p className="font-medium mb-2">Corox Engineering SRL</p>
+                <p className="text-sm">
+                  Certified to ISO 9001:2015 Quality Management System
+                </p>
+                <p className="text-sm mt-2">
+                  This certification demonstrates our commitment to quality,
+                  continuous improvement, and customer satisfaction in all our
+                  industrial automation and Machine Safety services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </footer>
+  );
+}

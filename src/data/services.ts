@@ -13,6 +13,7 @@ export interface ServiceCategory {
 	slug: string
 	name: string
 	icon: LucideIconType
+	image?: string
 	longDescription: string
 	shortDescription: string
 	primary?: boolean
@@ -25,6 +26,7 @@ export const serviceCategories: ServiceCategory[] = [
 		slug: 'instalatii-electrice',
 		name: 'Instalații electrice',
 		icon: Zap,
+		image: '/electrical-installations.png',
 		primary: true,
 		shortDescription:
 			'Soluții complete pentru tablouri și instalații electrice industriale cu comenzi de vigoare, incluzând verificări și măsurători conform normativelor.',
@@ -54,6 +56,7 @@ export const serviceCategories: ServiceCategory[] = [
 		slug: 'machine-safety',
 		name: 'Machine Safety',
 		icon: ShieldCheck,
+		image: '/machine-safety.png',
 		shortDescription:
 			'Evaluări de risc, măsurători de siguranță și certificări CE pentru echipamente industriale conform standardelor europene.',
 		longDescription:
@@ -69,6 +72,7 @@ export const serviceCategories: ServiceCategory[] = [
 		slug: 'solutii-de-automatizare',
 		name: 'Soluții de automatizare',
 		icon: Cog,
+		image: '/automation.png',
 		shortDescription:
 			'Soluții complete de automatizare industrială: de la concept la implementare, incluzând PLC & SCADA, roboți industriali și colaborativi, mentenanță.',
 		longDescription:
@@ -86,6 +90,7 @@ export const serviceCategories: ServiceCategory[] = [
 		slug: 'proiectare-si-executie',
 		name: 'Proiectare și execuție',
 		icon: Wrench,
+		image: '/proiectare.png',
 		shortDescription:
 			'Servicii integrate de proiectare și execuție electrică și mecanică pentru sisteme industriale.',
 		longDescription:
@@ -102,6 +107,7 @@ export const serviceCategories: ServiceCategory[] = [
 		slug: 'distributie-produse-echipamente',
 		name: 'Distribuție produse și echipamente',
 		icon: Package,
+		image: '/distributie.png',
 		shortDescription:
 			'Distribuție de echipamente și componente industriale cu suport tehnic specializat, supply chain management și opțiuni de achiziție flexibile.',
 		longDescription:

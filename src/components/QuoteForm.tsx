@@ -35,33 +35,30 @@ export default function QuoteForm() {
 
     try {
       const payload = {
+        access_key: "1109e53f-fbea-4d16-9c9f-9ee396744ebb",
         name: formData.name,
         email: formData.email,
-        message: `Telefon: ${formData.phone || '-'}\nCompanie: ${formData.company || '-'}\nServiciu: ${formData.service || '-'}\n\nMesaj:\n${formData.message}`,
+        phone: formData.phone,
+        company: formData.company,
+        service: formData.service,
+        message: formData.message,
       };
 
-      const res = await fetch("https://formcarry.com/s/YoQC-Ps4OFl", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
-          Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
-      
-             // Check if the response is ok (status 200-299)
-       if (res.ok) {
-         setSuccess("Vă mulțumim! Am primit solicitarea dumneavoastră.");
-         setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
-         // Reset form data instead of calling reset() on potentially null currentTarget
-       } else {
-        // Try to get error details from response
-        try {
-          const json = await res.json()
-          setError(json?.message || `Eroare ${res.status}: ${res.statusText}`)
-        } catch {
-          setError(`Eroare ${res.status}: ${res.statusText}`)
-        }
+
+      const json = await res.json();
+
+      if (res.status === 200) {
+        setSuccess("Vă mulțumim! Am primit solicitarea dumneavoastră.");
+        setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+      } else {
+        setError(json.message || `Eroare ${res.status}: ${res.statusText}`);
       }
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Eroare de rețea";
