@@ -171,6 +171,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
                   client={project.client ?? ''}
                   year={project.year}
                   iconType={project.iconType}
+                  images={project.images}
                   onClick={() => openModalFor(project)}
                 />
               </div>

@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   const baseUrl = 'https://coroxengineering.ro'
   const currentDate = new Date().toISOString()

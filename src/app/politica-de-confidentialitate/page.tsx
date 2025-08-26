@@ -28,15 +28,30 @@ export default function PoliticaConfidentialitate() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="pt-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-left">
-              Politica de Confidențialitate
-            </h1>
-            <p className="text-white/80 max-w-3xl text-left leading-relaxed">
-              Cum colectăm, utilizăm și protejăm datele dvs. personale în cadrul Corox Engineering.
-            </p>
+      <section className="relative text-white overflow-hidden">
+        <img 
+          src="/BannerB.jpg" 
+          alt="Corox Engineering" 
+          className="absolute w-full h-full object-cover animate-fade-in" 
+        />
+        {/* Gradient overlay: left (100% opacity) to right (80% opacity), hidden on mobile */}
+        <div className="hidden md:block absolute inset-0">
+          <div className="w-full h-full bg-gradient-to-r from-primary/100 to-primary/70"></div>
+        </div>
+        {/* Mobile-only solid background */}
+        <div className="md:hidden absolute inset-0 bg-primary"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl pt-8">
+              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
+                Politica de Confidențialitate
+              </h1>
+              <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
+                Cum colectăm, utilizăm și protejăm datele dvs. personale în cadrul Corox Engineering.
+              </p>
+            </div>
           </div>
         </div>
       </section>

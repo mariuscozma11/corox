@@ -36,17 +36,32 @@ export default function Portfolio() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="pt-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Portofoliu Proiecte
-            </h1>
-            <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
-              Descoperă proiectele noastre de succes în automatizări
-              industriale, Machine Safety și soluții tehnice integrate realizate
-              în Timișoara, Timiș și pentru industria românească.
-            </p>
+      <section className="relative text-white overflow-hidden">
+        <img 
+          src="/BannerD.png" 
+          alt="Corox Engineering" 
+          className="absolute w-full h-full object-cover animate-fade-in scale-x-[-1]" 
+        />
+        {/* Gradient overlay: left (100% opacity) to right (80% opacity), hidden on mobile */}
+        <div className="hidden md:block absolute inset-0">
+          <div className="w-full h-full bg-gradient-to-r from-primary/100 via-primary/98 to-primary/70"></div>
+        </div>
+        {/* Mobile-only solid background */}
+        <div className="md:hidden absolute inset-0 bg-primary"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl pt-8">
+              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
+                Portofoliu Proiecte
+              </h1>
+              <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
+                Descoperă proiectele noastre de succes în automatizări
+                industriale, Machine Safety și soluții tehnice integrate realizate
+                în Timișoara, Timiș și pentru industria românească.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -81,9 +96,9 @@ export default function Portfolio() {
               //   year: "2023",
               //   iconType: "automation",
               //   images: [
-              //     { src: "/next.svg", alt: "Ecran SCADA" },
-              //     { src: "/vercel.svg", alt: "Arhitectură sistem" },
-              //     { src: "/logo-color.svg", alt: "Siglă proiect" },
+              //     { src: "/automation.png", alt: "Sistem SCADA" },
+              //     { src: "/machine-safety.png", alt: "Arhitectură sistem" },
+              //     { src: "/electrical-installations.png", alt: "Control automat" },
               //   ],
               // },
               {
@@ -124,6 +139,7 @@ export default function Portfolio() {
                     src: "/celula3.jpeg",
                     alt: "Celula Robotizata pentru Injectie",
                   },
+                 
                 ],
               },
               {
@@ -132,7 +148,7 @@ export default function Portfolio() {
 `,
                 tags: ["Dispozitiv", "Proiectare", "Mecanic"],
                 year: "2024",
-                iconType: "automation",
+                iconType: "metal",
                 images: [
                   {
                     src: "/tambur1.jpeg",
@@ -146,6 +162,7 @@ export default function Portfolio() {
                     src: "/tambur3.jpeg",
                     alt: "Dispozitiv de Schimbare Tambur",
                   },
+                
                 ],
               },
               {
@@ -171,6 +188,7 @@ export default function Portfolio() {
                     src: "/conveior3.jpeg",
                     alt: "Conveior cu role",
                   },
+               
                 ],
               }
             ]}

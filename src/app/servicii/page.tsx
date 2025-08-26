@@ -36,17 +36,32 @@ export default function Services() {
     <div>
       <ReactCookieBot domainGroupId={domainGroup} />
       {/* Hero Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="pt-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Servicii de Automatizare Industrială și Machine Safety 
-            </h1>
-            <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
-              Corox Engineering oferă servicii complete de automatizare industrială, 
-              Machine Safety și sisteme tehnice integrate pentru industria românească, 
-              cu accent pe calitate, siguranță și conformitate cu standardele europene.
-            </p>
+      <section className="relative text-white overflow-hidden">
+        <img 
+          src="/Banner.png" 
+          alt="Corox Engineering" 
+          className="absolute w-full h-full object-cover animate-fade-in" 
+        />
+        {/* Gradient overlay: left (100% opacity) to right (80% opacity), hidden on mobile */}
+        <div className="hidden md:block absolute inset-0">
+          <div className="w-full h-full bg-gradient-to-r from-primary/100 to-primary/70"></div>
+        </div>
+        {/* Mobile-only solid background */}
+        <div className="md:hidden absolute inset-0 bg-primary"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl pt-8">
+              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
+                Servicii de Automatizare Industrială și Machine Safety 
+              </h1>
+              <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
+                Corox Engineering oferă servicii complete de automatizare industrială, 
+                Machine Safety și sisteme tehnice integrate pentru industria românească, 
+                cu accent pe calitate, siguranță și conformitate cu standardele europene.
+              </p>
+            </div>
           </div>
         </div>
       </section>

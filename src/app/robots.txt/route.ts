@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   const robotsTxt = `# Corox Engineering Robots.txt
 # Last updated: ${new Date().toISOString()}
