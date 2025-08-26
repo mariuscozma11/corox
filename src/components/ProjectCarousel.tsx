@@ -9,7 +9,7 @@ interface Project {
   title: string
   description: string
   tags: string[]
-  client: string
+  client?: string
   year: string
   iconType: 'automation' | 'certification' | 'metal' | 'electrical' | 'robotics' | 'consulting'
   images?: { src: string; alt?: string }[]
@@ -110,7 +110,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
       description: p.description,
       images,
       tags: p.tags,
-      client: p.client,
+      client: p.client ?? '',
       year: p.year,
     }
     setOpenProject(detail)
@@ -168,7 +168,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
                   title={project.title}
                   description={project.description}
                   tags={project.tags}
-                  client={project.client}
+                  client={project.client ?? ''}
                   year={project.year}
                   iconType={project.iconType}
                   onClick={() => openModalFor(project)}

@@ -1,3 +1,29 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Politica de Confidențialitate - Corox Engineering | Timișoara, România',
+  description: 'Politica de Confidențialitate Corox Engineering. Informații despre protecția datelor personale și drepturile dvs. conform GDPR.',
+  keywords: 'politica confidentialitate, GDPR, protectie date, Corox Engineering, Timișoara, România',
+  openGraph: {
+    title: 'Politica de Confidențialitate - Corox Engineering | Timișoara, România',
+    description: 'Politica de Confidențialitate Corox Engineering. Informații despre protecția datelor personale și drepturile dvs.',
+    type: 'website',
+    locale: 'ro_RO',
+    url: 'https://coroxengineering.ro/politica-de-confidentialitate',
+    images: [
+      {
+        url: '/og-img.png',
+        width: 1200,
+        height: 630,
+        alt: 'Politica de Confidențialitate - Corox Engineering',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://coroxengineering.ro/politica-de-confidentialitate',
+  },
+}
+
 export default function PoliticaConfidentialitate() {
   return (
     <div className="min-h-screen bg-white">

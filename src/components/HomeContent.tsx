@@ -78,30 +78,46 @@ export default function HomeContent() {
       />
       <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-4xl pt-8">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
-              Automatizări Industriale și Machine Safety în Timișoara și România
-            </h1>
-            <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
-              Corox Engineering, cu sediul în Ghiroda, Timiș, oferă soluții complete de automatizare industrială,
-              Machine Safety, evaluări de risc și sisteme tehnice integrate pentru industria românească.
-            </p>
+      <section className="relative text-white overflow-hidden">
+        
+        <img 
+          src="/BannerB.jpg" 
+          alt="Corox Engineering" 
+          className="absolute w-full h-full object-cover animate-fade-in" 
+        />
+        {/* Gradient overlay: left (100% opacity) to right (80% opacity), hidden on mobile */}
+        <div className="hidden md:block absolute inset-0">
+          <div className="w-full h-full bg-gradient-to-r from-primary/100 to-primary/70"></div>
+        </div>
+        {/* Mobile-only solid background */}
+        <div className="md:hidden absolute inset-0 bg-primary"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl pt-8">
+              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-left leading-tight">
+                Automatizări Industriale și Machine Safety în Timișoara și România
+              </h1>
+              <p className="text-xl md:text-2xl mb-12 max-w-3xl text-left leading-relaxed text-white/80">
+                Corox Engineering, cu sediul în Ghiroda, Timiș, oferă soluții complete de automatizare industrială,
+                Machine Safety, evaluări de risc și sisteme tehnice integrate pentru industria românească.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link
-                href="/contact"
-                className="bg-secondary text-primary px-8 py-4 font-semibold hover:bg-secondary/90 transition-all duration-300 flex items-center space-x-3"
-              >
-                <span>Contactează-ne</span>
-              </Link>
-              <Link
-                href="/servicii"
-                className="border-2 border-secondary text-secondary px-8 py-4 font-semibold hover:bg-secondary hover:text-primary hover:border-primary   transition-all duration-300"
-              >
-                Vezi Serviciile
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Link
+                  href="/contact"
+                  className="bg-secondary text-primary px-8 py-4 font-semibold hover:bg-secondary/90 transition-all duration-300 flex items-center space-x-3"
+                >
+                  <span>Contactează-ne</span>
+                </Link>
+                <Link
+                  href="/servicii"
+                  className="border-2 border-secondary text-secondary px-8 py-4 font-semibold hover:bg-secondary hover:text-primary hover:border-primary   transition-all duration-300"
+                >
+                  Vezi Serviciile
+                </Link>
+              </div>
             </div>
           </div>
         </div>

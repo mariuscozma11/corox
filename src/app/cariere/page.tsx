@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ro_RO',
     url: 'https://coroxengineering.ro/cariere',
+    images: [
+      {
+        url: '/og-img.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cariere Corox Engineering - Oportunități în Automatizări Industriale',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://coroxengineering.ro/cariere',

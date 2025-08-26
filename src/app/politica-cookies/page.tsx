@@ -1,7 +1,29 @@
-"use client";
-
+import type { Metadata } from 'next'
 import Script from "next/script";
-import { useEffect, useState } from "react";
+
+export const metadata: Metadata = {
+  title: 'Politica de Cookies - Corox Engineering | Timișoara, România',
+  description: 'Politica de Cookies Corox Engineering. Informații despre utilizarea cookie-urilor pe site-ul nostru și opțiunile de consimțământ disponibile.',
+  keywords: 'politica cookies, cookie-uri, consimțământ, Corox Engineering, Timișoara, România',
+  openGraph: {
+    title: 'Politica de Cookies - Corox Engineering | Timișoara, România',
+    description: 'Politica de Cookies Corox Engineering. Informații despre utilizarea cookie-urilor pe site-ul nostru.',
+    type: 'website',
+    locale: 'ro_RO',
+    url: 'https://coroxengineering.ro/politica-cookies',
+    images: [
+      {
+        url: '/og-img.png',
+        width: 1200,
+        height: 630,
+        alt: 'Politica de Cookies - Corox Engineering',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://coroxengineering.ro/politica-cookies',
+  },
+}
 
 export default function PoliticaCookies() {
   return (

@@ -54,10 +54,9 @@ export default function ProjectModal({ open, onClose, project }: ProjectModalPro
           onClose()
         }
       }
-      if (!zoom) {
-        if (e.key === 'ArrowLeft') goPrev()
-        if (e.key === 'ArrowRight') goNext()
-      }
+      // Arrow keys work in both normal and zoom modes
+      if (e.key === 'ArrowLeft') goPrev()
+      if (e.key === 'ArrowRight') goNext()
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
@@ -170,16 +169,49 @@ export default function ProjectModal({ open, onClose, project }: ProjectModalPro
 
       {/* Zoom overlay */}
       {zoom && (
-        <div className="absolute inset-0 z-[110] flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setZoom(false)}>
+        <div className="absolute inset-0 z-[110] flex items-center justify-center p-4 cursor-zoom-out overflow-hidden" onClick={() => setZoom(false)}>
           <div className="absolute inset-0 bg-black/80" />
-          <div className="relative z-[111] max-w-[95vw] max-h-[95vh]">
+          <div className="relative z-[111] w-full h-full flex items-center justify-center">
             <Image
               src={images[index]?.src}
               alt={images[index]?.alt ?? project.title}
               width={1920}
               height={1080}
-              className="w-full h-full object-contain"
+              className="max-w-[95vw] max-h-[100vh] object-contain"
             />
+            
+            {/* Navigation arrows in zoom mode */}
+            {total > 1 && (
+              <>
+                <button
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    goPrev()
+                  }}
+                  aria-label="Imagine anterioară"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/90 text-slate-800 shadow-lg hover:bg-white transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    goNext()
+                  }}
+                  aria-label="Imagine următoare"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </>
+            )}
+            
+            {/* Image counter in zoom mode */}
+            {total > 1 && (
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white text-sm px-4 py-2 rounded-full">
+                {index + 1} / {total}
+              </div>
+            )}
           </div>
         </div>
       )}

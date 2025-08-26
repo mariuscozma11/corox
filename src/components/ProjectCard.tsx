@@ -62,7 +62,7 @@ export default function ProjectCard({
           {title}
         </h3>
         <p className="text-gray-600 text-left leading-relaxed mb-4">
-          {description}
+          {description.length > 120 ? `${description.substring(0, 120)}...` : description}
         </p>
       </div>
       <div className="space-y-4">
@@ -77,7 +77,6 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="text-sm text-gray-600 space-y-1">
-          <p><span className="font-medium text-gray-900">Client:</span> {client}</p>
           <p><span className="font-medium text-gray-900">An:</span> {year}</p>
         </div>
       </div>

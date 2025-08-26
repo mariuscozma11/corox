@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ro_RO',
     url: 'https://coroxengineering.ro',
+    images: [
+      {
+        url: '/og-img.png',
+        width: 1200,
+        height: 630,
+        alt: 'Corox Engineering - Automatizări Industriale și Machine Safety',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://coroxengineering.ro',

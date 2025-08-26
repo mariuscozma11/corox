@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Factory,
-  Construction,
-  Settings,
-  Award,
-  Car,
-} from "lucide-react";
+import { Factory, Construction, Settings, Award, Car } from "lucide-react";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import QuoteForm from "@/components/QuoteForm";
 
@@ -17,14 +11,24 @@ export const metadata: Metadata = {
   keywords:
     "portofoliu proiecte, referințe, automatizări industriale, Machine Safety, colaborări, Timișoara, Timiș, România, proiecte industriale, soluții tehnice",
   openGraph: {
-    title: "Portofoliu Proiecte Automatizări Industriale și Machine Safety | Corox Engineering Timișoara",
-    description: "Explorează portofoliul nostru de proiecte în automatizări industriale, Machine Safety și soluții tehnice integrate realizate în Timișoara, Timiș și toată România.",
-    type: 'website',
-    locale: 'ro_RO',
-    url: 'https://coroxengineering.ro/portofoliu',
+    title:
+      "Portofoliu Proiecte Automatizări Industriale și Machine Safety | Corox Engineering Timișoara",
+    description:
+      "Explorează portofoliul nostru de proiecte în automatizări industriale, Machine Safety și soluții tehnice integrate realizate în Timișoara, Timiș și toată România.",
+    type: "website",
+    locale: "ro_RO",
+    url: "https://coroxengineering.ro/portofoliu",
+    images: [
+      {
+        url: "/og-img.png",
+        width: 1200,
+        height: 630,
+        alt: "Portofoliu Proiecte Automatizări Industriale și Machine Safety - Corox Engineering",
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://coroxengineering.ro/portofoliu',
+    canonical: "https://coroxengineering.ro/portofoliu",
   },
 };
 
@@ -36,7 +40,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pt-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">
-              Portofoliu Proiecte 
+              Portofoliu Proiecte
             </h1>
             <p className="text-xl max-w-2xl text-left leading-relaxed text-white/80">
               Descoperă proiectele noastre de succes în automatizări
@@ -83,123 +87,96 @@ export default function Portfolio() {
               //   ],
               // },
               {
-                title: "Conveior cu banda",
-                description: "Conveior cu banda",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
+                title: "Dispozitiv de Clipsare Senzori",
+                description:
+                  "Dispozitivul este echipat cu un piston pneumatic , un rulment liniar si doua axe de precizie pentru actionarea pe verticala si o surubelnita pneumatica pentru rotirea senzorului in pozitia finala. Cu o forta definita de pistonul pneumatic, partea superioara a dispozitivului coboara pentru a presa capacul senzorului iar surubelnita pneumatica insurubeaza pentru a se realiza o clipsare corecta.",
+                tags: ["Automatizare", "Safety", "Electric"],
                 year: "2023",
                 iconType: "automation",
                 images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  {
+                    src: "/choco1.jpeg",
+                    alt: "Dispozitiv de Clipsare Senzori",
+                  },
+                  {
+                    src: "/choco2.jpeg",
+                    alt: "Dispozitiv de Clipsare Senzori",
+                  },
                 ],
               },
               {
-                title: "Conveior cu role",
-                description: "Conveior cu role",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
+                title: "Celula Robotizata pentru Injectie",
+                description:
+                  "Scopul principal al acestei celule robotizate este de a efectua procesul de injectare a materialului (ceramică) în senzori în mod automat, fără intervenția constantă a unui operator. Cu toate acestea, un operator trebuie să monitorizeze procesul de injectare pentru a putea interveni sau să anunțe personalul calificat în cazul apariției oricăror probleme. După finalizarea procesului de alimentare cu material, robotul se va poziționa într-o zonă destinată schimbului de grippere cu unul încărcat. Operatorul va deschide o fereastră pentru a accesa această zonă. Dispozitivele de injecție cu material sunt fixate în partea laterală a celulei.",
+                tags: ["Robot", "Safety", "Automatizare"],
                 year: "2023",
                 iconType: "automation",
                 images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  {
+                    src: "/celula1.jpeg",
+                    alt: "Celula Robotizata pentru Injectie",
+                  },
+                  {
+                    src: "/celula2.jpeg",
+                    alt: "Celula Robotizata pentru Injectie",
+                  },
+                  {
+                    src: "/celula3.jpeg",
+                    alt: "Celula Robotizata pentru Injectie",
+                  },
                 ],
               },
               {
-                title: "Insertie masa acustica",
-                description: "Insertie masa acustica",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
-                year: "2023",
+                title: "Dispozitiv de Schimbare Tambur",
+                description: `Dispozitivul va fi utilizat în cadrul procesului de schimbare a burdufelor din presă. Acesta va fi capabil să transporte burdufele de la atelierul destinat burdufelor până la presă, iar plasarea burdufelor va fi cât mai aproape de zona interioară a presei.
+`,
+                tags: ["Dispozitiv", "Proiectare", "Mecanic"],
+                year: "2024",
                 iconType: "automation",
                 images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  {
+                    src: "/tambur1.jpeg",
+                    alt: "Dispozitiv de Schimbare Tambur",
+                  },
+                  {
+                    src: "/tambur2.jpeg",
+                    alt: "Dispozitiv de Schimbare Tambur",
+                  },
+                  {
+                    src: "/tambur3.jpeg",
+                    alt: "Dispozitiv de Schimbare Tambur",
+                  },
                 ],
               },
               {
-                title: "Dispozitiv de dezinfectie",
-                description: "Dispozitiv de dezinfectie",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
-                year: "2023",
+                title: "Conveior cu Role",
+                description: [
+                  "Functionalitatea este unidirecțională, transportul efectuându-se doar într-o singură direcție.",
+                  "Pentru realizarea acestui scop, utilajul este compus dintr-un tronson de 18m și unul de 2.5m drept, două curbe și o porțiune dreaptă de așteptare a cauciucurilor, asigurând astfel descărcarea de pe cele 5 stații de lucru.",
+                  "Pentru asigurarea funcționalității, sistemul este prevăzut cu o serie de senzori fotoelectrici amplasați pe profilele laterale ale conveiorului. Conexiunile electrice sunt realizate în unitățile de comandă (zone controller) montate pe lateralul conveiorului. Profilele laterale ale conveioarelor sunt prevăzute cu parapeti cu role metalice pentru împiedicarea căderii materialului transportat.",
+                ].join(' '),
+                tags: ["Conveior", "Proiectare", "Mecanic"],
+                year: "2022",
                 iconType: "automation",
                 images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
+                  {
+                    src: "/conveior1.jpeg",
+                    alt: "Conveior cu role",
+                  },
+                  {
+                    src: "/conveior2.jpeg",
+                    alt: "Conveior cu role",
+                  },
+                  {
+                    src: "/conveior3.jpeg",
+                    alt: "Conveior cu role",
+                  },
                 ],
-              },
-              {
-                title: "Dispozitiv de curatare cu aer ionizat",
-                description: "Dispozitiv de curatare cu aer ionizat pentru faruri auto",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
-                year: "2023",
-                iconType: "automation",
-                images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                ],
-              },
-              {
-                title: "Dispozitiv de testare senzori",
-                description: "Dispozitiv de testare senzori de proximitate",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
-                year: "2023",
-                iconType: "automation",
-                images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                ],
-              },
-              {
-                title: "Dispozitiv de capsare conector senzori",
-                description: "Dispozitiv de capsare conector senzor",
-                tags: ["Automatizare", "PLC", "Conveyor"],
-                client: "Client",
-                year: "2023",
-                iconType: "automation",
-                images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                ],
-              },
-              {
-                title: "Scara mobila",
-                description: "Scara mobila",
-                tags: ["Structuri", "Proiectare", "Executie"],
-                client: "Client",
-                year: "2023",
-                iconType: "metal",
-                images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                ],
-              },
-              {
-                title: "Injectie cu robot industrial",
-                description: "Injectie cu robot industrial",
-                tags: ["Robot industrial", "Proiectare", "PLC"],
-                client: "Client",
-                year: "2023",
-                iconType: "robotics",
-                images: [
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                  { src: "/conveior-cu-banda.jpg", alt: "Conveior cu banda" },
-                ],
-              },
-
-              
+              }
             ]}
           />
         </div>
       </section>
-
-
-
-
 
       {/* Industry Sectors */}
       <section className="py-20 bg-white">
@@ -239,9 +216,7 @@ export default function Portfolio() {
                 <Factory className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
-                  Producție
-                </h4>
+                <h4 className="font-semibold text-gray-900 mb-1">Producție</h4>
                 <p className="text-sm text-gray-600">
                   Optimizarea proceselor industriale
                 </p>
@@ -267,9 +242,7 @@ export default function Portfolio() {
                 <Settings className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
-                  Procesare
-                </h4>
+                <h4 className="font-semibold text-gray-900 mb-1">Procesare</h4>
                 <p className="text-sm text-gray-600">
                   Sisteme de control și monitorizare
                 </p>
@@ -317,18 +290,18 @@ export default function Portfolio() {
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6 text-left">
-              Cerere de Ofertă  
+              Cerere de Ofertă
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl text-left leading-relaxed">
-              Contactați-ne pentru o ofertă personalizată pentru proiectul dumneavoastră.
-              Echipa noastră vă va contacta în maxim 24 de ore.
+              Contactați-ne pentru o ofertă personalizată pentru proiectul
+              dumneavoastră. Echipa noastră vă va contacta în maxim 24 de ore.
             </p>
           </div>
           <div className="border-l-4 border-slate-400 bg-white pl-8 py-8 pr-8">
             <QuoteForm />
           </div>
         </div>
-      </section>    
+      </section>
     </div>
   );
 }
